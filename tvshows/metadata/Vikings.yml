@@ -1,0 +1,39 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+##Vikings
+  "Vikings":
+    sort_title: "Vikings"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/222379
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222380
+      1:
+        title: "Season 01"
+        url_poster: "https://theposterdb.com/api/assets/222381"
+      2:
+        title: "Season 02"
+        url_poster: "https://theposterdb.com/api/assets/222382"
+      3:
+        title: "Season 03"
+        url_poster: "https://theposterdb.com/api/assets/222383"
+      4:
+        title: "Season 04"
+        url_poster: https://theposterdb.com/api/assets/222384
+      5:
+        title: "Season 05"
+        url_poster: https://theposterdb.com/api/assets/222385
+      6:
+        title: "Season 06"
+        url_poster: https://theposterdb.com/api/assets/222386
+
+##Vikings: Valhalla
+  "Vikings: Valhalla":
+    sort_title: "Vikings: Valhalla"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/222388
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/222389

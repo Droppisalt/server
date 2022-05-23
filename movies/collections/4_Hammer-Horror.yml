@@ -1,0 +1,30 @@
+templates:
+  Set:
+    optional:
+      - collection
+      - movie
+      - list
+      - trakt
+      - imdb
+    tmdb_collection_details: <<collection>>
+    tmdb_movie: <<movie>>
+    tmdb_list: <<list>>
+    tmdb_person: <<person>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +4_<<collection_name>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+    
+collections:
+  "Dracula (Hammer)":
+    template: { name: Set, collection: 123724, poster: 160853 }
+  "Frankenstein (Hammer)":
+    template: { name: Set, collection: 123720, poster: 161004 }
+  "Hammer Film Productions":
+    template: { name: Set, company: 1314, poster: 176820 }
+  "Mummy (Hammer)":
+    template: { name: Set, collection: 138965, poster: 161303 }
+  "Quatermass (Hammer)":
+    template: { name: Set, collection: 123726, poster: 161292 }

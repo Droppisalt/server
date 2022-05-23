@@ -1,0 +1,160 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "The Bad Batch":
+    sort_title: "Bad Batch"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/174478
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225823
+
+  "The Book of Boba Fett":
+    sort_title: "Book of Boba Fett"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/200213
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/200214
+
+  "The Mandalorian":
+    sort_title: "Mandalorian"
+    year: 2019
+    url_poster: https://theposterdb.com/api/assets/174476
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/200215
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/200216
+        
+  "Star Wars: Clone Wars":
+    sort_title: "Star Wars: Clone Wars 1"
+    year: 2003
+    url_poster: https://theposterdb.com/api/assets/174479
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+      3:
+        title: "Season 003"
+        
+  "Star Wars: The Clone Wars":
+    sort_title: "Star Wars: Clone Wars 2"
+    year: 2008
+    url_poster: https://theposterdb.com/api/assets/174473
+    seasons:
+      0:
+        title: "Specials"
+        url_poster:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225836
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/225837
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/225838
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/225839
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/225840
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/225841
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/225842
+        
+  "Star Wars: Droids":
+    sort_title: "Star Wars: Droids"
+    year: 1985
+    url_poster: https://theposterdb.com/api/assets/174477
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/225847
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225848
+        
+  "Star Wars: Ewoks":
+    sort_title: "Star Wars: Ewoks"
+    year: 1985
+    url_poster: https://theposterdb.com/api/assets/174490
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars: Forces of Destiny":
+    sort_title: "Star Wars: Forces of Destiny"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/174488
+    seasons: 
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars Galaxy of Adventures":
+    sort_title: "Star Wars Galaxy of Adventures"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/174491
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars Rebels":
+    sort_title: "Star Wars Rebels"
+    year: 2014
+    url_poster: https://theposterdb.com/api/assets/174474
+    seasons: 
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+      3:
+        title: "Season 003"
+      4:
+        title: "Season 004"
+    
+  "Star Wars Resistance":
+    sort_title: "Star Wars Resistance"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/174475
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars: Visions":
+    sort_title: "Star Wars: Visions"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/175206
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225814

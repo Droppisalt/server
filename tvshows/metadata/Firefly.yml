@@ -1,0 +1,10 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Firefly":
+    sort_title: "Firefly"
+    year: 2002
+    url_poster: https://theposterdb.com/api/assets/185523
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: ""

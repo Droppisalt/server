@@ -1,0 +1,10 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "The Cuphead Show!":
+    sort_title: "Cuphead Show"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/222318
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/222319

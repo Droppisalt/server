@@ -1,0 +1,193 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Star Trek":
+    sort_title: "Star Trek"
+    year: 1966
+    url_poster: https://theposterdb.com/api/assets/175969
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222244
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222245
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222246
+
+  "Star Trek: The Next Generation":
+    sort_title: "Star Trek: The Next Generation"
+    year: 1987
+    url_poster: https://theposterdb.com/api/assets/175970
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222250
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222251
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222252
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222253
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222254
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/222255
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/222256
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/222257
+        
+  "Star Trek: Deep Space Nine":
+    sort_title: "Star Trek: Deep Space Nine"
+    year: 1992
+    url_poster: https://theposterdb.com/api/assets/175971
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222258
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222259
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222260
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222261
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222262
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/222263
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/222264
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/222265
+        
+  "Star Trek: Voyager":
+    sort_title: "Star Trek: Voyager"
+    year: 1995
+    url_poster: https://theposterdb.com/api/assets/175972
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222266
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222267
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222268
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222269
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222270
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/222271
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/222272
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/222273
+        
+  "Star Trek: Enterprise":
+    sort_title: "Star Trek: Enterprise"
+    year: 2001
+    url_poster: https://theposterdb.com/api/assets/175973
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222274
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222275
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222276
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222277
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222278
+        
+  "Star Trek: Discovery":
+    sort_title: "Star Trek: Discovery"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/175974
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222156
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222157
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222158
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222159
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222160
+        
+  "Star Trek: Picard":
+    sort_title: "Star Trek: Picard"
+    year: 2020
+    url_poster: https://theposterdb.com/api/assets/175975
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/218152
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/218153
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/218154
+        
+  "Star Trek: The Animated Series":
+    sort_title: "Star Trek: The Animated Series"
+    year: 1973
+    url_poster: https://theposterdb.com/api/assets/175976
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222247
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222248
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222249
+        
+  "Star Trek: Lower Decks":
+    sort_title: "Star Trek: Lower Decks"
+    year: 2020
+    url_poster: https://theposterdb.com/api/assets/175977
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222167
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222168
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222169

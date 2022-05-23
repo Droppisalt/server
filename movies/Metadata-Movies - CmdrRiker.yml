@@ -1,0 +1,161 @@
+metadata:               #Posters found here https://theposterdb.com/user/CmdrRiker
+
+  "Ant-Man (2015)":
+    title: "Ant-Man"
+    year: 2015
+    url_poster: https://theposterdb.com/api/assets/152316
+
+  "Ant-Man and the Wasp (2018)":
+    title: "Ant-Man and the Wasp"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/152324
+
+  "Ant-Man and the Wasp: Quantumania (2023)":
+    title: "Ant-Man and the Wasp: Quantumania"
+    year: 2023
+    url_poster:
+
+  "The Avengers (2012)":
+    title: "The Avengers"
+    sort_title: "Avengers"
+    year: 2012
+    url_poster: https://theposterdb.com/api/assets/152310
+
+  "Avengers: Age of Ultron (2015)":
+    title: "Avengers: Age of Ultron"
+    year: 2015
+    url_poster: https://theposterdb.com/api/assets/152315
+
+  "Avengers: Infinity War (2018)":
+    title: "Avengers: Infinity War"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/152323
+
+  "Avengers: Endgame (2019)":
+    title: "Avengers: Endgame"
+    year: 2019
+    url_poster: https://theposterdb.com/api/assets/152326
+
+  "Black Panther (2018)":
+    title: "Black Panther"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/152322
+
+  "Black Panther: Wakanda Forever (2022)":
+    title: "Black Panther: Wakanda Forever"
+    year: 2022
+    url_poster: 
+
+  "Black Widow (2021)":
+    title: "Black Widow"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/152328
+
+  "Captain America: Civil War (2016)":
+    title: "Captain America: Civil War"
+    year: 2016
+    url_poster: https://theposterdb.com/api/assets/152317
+
+  "Captain America: The First Avenger (2011)":
+    title: "Captain America: The First Avenger"
+    sort_title: "Captain America: First Avenger"
+    year: 2011
+    url_poster: https://theposterdb.com/api/assets/152309
+
+  "Captain America: The Winter Soldier (2014)":
+    title: "Captain America: The Winter Soldier"
+    sort_title: "Captain America: Winter Soldier"
+    year: 2014
+    url_poster: https://theposterdb.com/api/assets/152313
+
+  "Captain Marvel (2019)":
+    title: "Captain Marvel"
+    year: 2019
+    url_poster: https://theposterdb.com/api/assets/152325
+
+  "Doctor Strange in the Multiverse of Madness (2022)":
+    title: "Doctor Strange in the Multiverse of Madness"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/234628
+
+  "Doctor Strange (2016)":
+    title: "Doctor Strange"
+    year: 2016
+    url_poster: https://theposterdb.com/api/assets/152318
+
+  "Eternals (2021)":
+    title: "Eternals"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/188076
+
+  "Guardians of the Galaxy (2014)":
+    title: "Guardians of the Galaxy"
+    year: 2014
+    url_poster: https://theposterdb.com/api/assets/152314
+
+  "Guardians of the Galaxy Vol. 2 (2017)":
+    title: "Guardians of the Galaxy Vol. 2"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/152319
+
+  "The Incredible Hulk (2008)":
+    title: "The Incredible Hulk"
+    sort_title: "Incredible Hulk"
+    year: 2008
+    url_poster: https://theposterdb.com/api/assets/152306
+
+  "Iron Man (2008)":
+    title: "Iron Man"
+    year: 2008
+    url_poster: https://theposterdb.com/api/assets/152305
+
+  "Iron Man 2 (2010)":
+    title: "Iron Man 2"
+    year: 2010
+    url_poster: https://theposterdb.com/api/assets/152307
+
+  "Iron Man 3 (2013)":
+    title: "Iron Man 3"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/152311
+
+  "Shang-Chi and the Legend of the Ten Rings (2021)":
+    title: "Shang-Chi and the Legend of the Ten Rings"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/162018
+
+  "Spider-Man: Far from Home (2019)":
+    title: "Spider-Man: Far From Home"
+    year: 2019
+    url_poster: https://theposterdb.com/api/assets/152327
+
+  "Spider-Man: Homecoming (2017)":
+    title: "Spider-Man: Homecoming"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/152320
+
+  "Spider-Man: No Way Home (2021)":
+    title: "Spider-Man: No Way Home"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/188605
+
+  "Thor (2011)":
+    title: "Thor"
+    year: 2011
+    url_poster: https://theposterdb.com/api/assets/152308
+
+  "Thor: The Dark World (2013)":
+    title: "Thor: The Dark World"
+    sort_title: "Thor: Dark World"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/152312
+
+  "Thor: Ragnarok (2017)":
+    title: "Thor: Ragnarok"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/152321
+
+  "Thor: Love and Thunder (2022)":
+    title: "Thor: Love and Thunder"
+    year: 2022
+    url_poster: 

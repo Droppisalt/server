@@ -1,0 +1,11 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "The Legend of Tarzan":
+    sort_title: "Legend of Tarzan"
+    year: 2001
+    url_poster: https://theposterdb.com/api/assets/191248
+    seasons:
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"

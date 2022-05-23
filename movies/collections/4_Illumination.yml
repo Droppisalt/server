@@ -1,0 +1,28 @@
+templates:
+  Set:
+    optional:
+      - collection
+      - movie
+      - list
+      - trakt
+      - imdb
+    tmdb_collection_details: <<collection>>
+    tmdb_movie: <<movie>>
+    tmdb_list: <<list>>
+    tmdb_person: <<person>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +4_<<collection_name>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+    
+collections:
+  "Despicable Me":
+    template: {name: Set, collection: 86066, poster: 163000 }
+  "Minions":
+    template: {name: Set, collection: 544669, poster: 192196 }
+  "Secret Life of Pets":
+    template: {name: Set, collection: 427084, poster: 162965 }
+  "Sing":
+    template: {name: Set, collection: 544670, poster: 211343 }

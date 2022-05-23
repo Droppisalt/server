@@ -1,0 +1,16 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Under the Dome":
+    sort_title: "Under the Dome"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/172261
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: ""
+      2:
+        title: "Season 02"
+        url_poster: ""
+      3:
+        title: "Season 03"
+        url_poster: ""

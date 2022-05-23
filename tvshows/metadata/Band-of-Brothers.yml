@@ -1,0 +1,13 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Band of Brothers":
+    sort_title: "Band of Brothers"
+    year: 2001
+    url_poster: https://theposterdb.com/api/assets/218218
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/218219
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/218220

@@ -1,0 +1,23 @@
+templates:
+  Set:
+    optional:
+      - collection
+      - movie
+      - list
+    tmdb_collection_details: <<collection>>
+    tmdb_movie: <<movie>>
+    tmdb_list: <<list>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +4_<<collection_name>>
+
+collections:
+  "Hobbit":
+    template: {name: Set, collection: 121938, poster: 187486 }
+  "Lord of the Rings":
+    template: {name: Set, collection: 119, poster: 52722 }
+  "Lord of the Rings (Animated)":
+    template: { name: Set, collection: 141290, movie: 123, poster: 187490 }
+  "Middle Earth":
+    template: {name: Set, list: 8195671, poster: 164138 }

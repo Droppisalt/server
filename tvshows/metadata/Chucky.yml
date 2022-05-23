@@ -1,0 +1,10 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Chucky":
+    sort_title: "Chucky"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/210340
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/210341

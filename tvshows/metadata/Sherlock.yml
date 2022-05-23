@@ -1,0 +1,22 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Sherlock":
+    sort_title: "Sherlock"
+    year: 2010
+    url_poster: https://theposterdb.com/api/assets/191408
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/191409
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/191410
+      2:
+        title: "Season 02"
+        url_poster: https://theposterdb.com/api/assets/191411
+      3:
+        title: "Season 03"
+        url_poster: https://theposterdb.com/api/assets/191412
+      4:
+        title: "Season 04"
+        url_poster: https://theposterdb.com/api/assets/191413

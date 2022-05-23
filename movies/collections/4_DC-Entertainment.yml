@@ -1,0 +1,45 @@
+######################################################
+#              DC Collections - Frexe                #
+######################################################
+templates:
+  Set:
+    optional:
+      - collection
+      - movie
+      - list
+      - imdb
+      - poster
+    tmdb_collection_details: <<collection>>
+    tmdb_movie: <<movie>>
+    tmdb_list: <<list>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +4_<<collection_name>>
+
+collections:
+  "Aquaman":  ##Not CmdrRiker
+    template: { name: Set, collection: 573693, poster: 162375 }
+  "Batman": ##Not CmdrRiker
+    template: { name: Set, collection: 120794, poster: 139790 }
+  "The Dark Knight": ##Not CmdrRiker
+    template: { name: Set, collection: 263, poster: 140067 }
+    sort_title: "Dark Knight"
+  "The Batman":
+    template: { name: Set, collection: 948485, poster: 218193 }
+    sort_title: "Batman"
+  "RED": 
+    template: { name: Set, collection: 163902, poster: 166409 }
+  "Suicide Squad": ##Not CmdrRiker
+    template: { name: Set, collection: 531242, poster: 139299 }
+  "Superman": ##Not CmdrRiker
+    template: { name: Set, collection: "8537, 209131", poster: 85383 }
+  "Swamp Thing": ##Not CmdrRiker
+    template: { name: Set, collection: 87228, poster: 162403 }
+  "Watchmen": ##Not CmdrRiker
+    template: { name: Set, list: 8196349, poster: 139221 }
+  "Wonder Woman": ##Not CmdrRiker
+    template: { name: Set, collection: 468552, poster: 139303 }
+  "Worlds of DC": ##Not CmdrRiker
+    template: { name: Set, imdb: "ls538267100", poster: 139195 }

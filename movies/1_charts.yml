@@ -1,0 +1,161 @@
+######################################################
+#                 Charts Collections                 #
+######################################################
+templates:
+  Chart:
+    optional:
+      - poster
+      - trakt
+    sort_title: +1_<<num>><<collection_name>>
+    sync_mode: sync
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+    
+  Best of:
+    optional:
+      - poster
+    trakt_list: https://trakt.tv/users/lish408/lists/rotten-tomatoes-best-of-<<year>>
+    sort_title: +1_<<num>>Best of <<year>>
+    sync_mode: sync
+    summary: Rotten Tomatoes Best Movies of <<year>>
+    smart_label: audience_rating.desc
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/year/best/<<year>>
+
+  Decade:
+    optional:
+      - poster
+    sort_title: +1_<<num>><<collection_name>>
+    sync_mode: sync
+    collection_order: custom
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/decade/best/<<poster>>
+    url_background: https://wallpapercave.com/wp/wp4016022.jpg
+    imdb_list:
+      - url: https://www.imdb.com/search/title/?title_type=feature,short&release_date=<<imdb>>&num_votes=10000,&sort=user_rating,desc
+        limit: 100
+    
+collections:
+#  "Plex Popular":
+#    template: { name: Chart, num: 0 }
+#    tautulli_popular:
+#      list_days: 30
+#      list_size: 20
+#      list_buffer: 20
+#    tautulli_watched:
+#      list_days: 30
+#      list_size: 20
+#      list_buffer: 20
+#    summary: Movies Popular on Plex
+
+  "Newly Released Movies":
+    template: { name: Chart, num: "001", trakt: "garycrawfordgc/lists/latest-releases" }
+    url_poster: "https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/chart/Newly%20Released%20Movies.jpg"
+    summary: "Latest releases"
+  
+  "Top 10 Movies of The Week":
+    template: { name: Chart, num: "002", trakt: "giladg/lists/top-10-movies-of-the-week?sort=percentage,asc" }
+    summary: "Top 10 Movies of The Week"
+  
+  "Trending":
+    template: { name: Chart, num: "003", poster: 213570 }
+    trakt_trending: 10
+    tmdb_trending_daily: 10
+    tmdb_trending_weekly: 10
+    summary: Movies Trending across the internet
+    
+  "Popular":
+    template: { name: Chart, num: "004", poster: 213575 }
+    tmdb_popular: 40
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short
+      limit: 40
+    summary: "Popular Movies across the internet"
+    
+#  "Oscars":
+#    template: { name: Chart, num: "005" }
+#    imdb_list: https://www.imdb.com/search/title/?title_type=feature,documentary&groups=oscar_winner
+#    summary: Oscar Winning Movies
+  
+  "Top Rated":
+    template: { name: Chart, num: "006", poster: 213605 }
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250
+    collection_oder: custom
+    tmdb_top_rated: 250
+    summary: "Top Rated Movies across the internet"
+
+  "IMDb Top 250":
+    template: { name: Chart, num: "007" }
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=250&sort=user_rating,desc
+    url_poster: "https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/chart/IMDb Top 250 Movies.jpg"
+    collection_order: custom
+    summary: "Top 250 Movies on IMDb"
+
+  "IMDb Top 100 Superhero Movies":
+    template: { name: Chart, num: "008" }
+    imdb_list: https://www.imdb.com/list/ls008583762/?sort=user_rating,desc
+    collection_order: custom
+    summary: "Top 100 Superhero Movies"
+  
+  "IMDb Top 100 Film Noir":
+    template: { name: Chart, num: "009" }
+    imdb_list: https://www.imdb.com/list/ls027489496/?sort=user_rating,desc
+    collection_order: custom
+    summary: "Top 100 Film Noir Movies"
+    
+#####################################################
+#              Decade Collections                   #
+#####################################################
+
+  "Best of 1960s":
+    template: { name: Decade, num: "010", imdb: "1960-01-01,1969-12-31", poster: "1960.jpg" }
+
+  "Best of 1970s":
+    template: { name: Decade, num: "011", imdb: "1970-01-01,1979-12-31", poster: "1970.jpg" }
+
+  "Best of 1980s":
+    template: { name: Decade, num: "012", imdb: "1980-01-01,1989-12-31", poster: "1980.jpg" }
+
+  "Best of 1990s":
+    template: { name: Decade, num: "013", imdb: "1990-01-01,1999-12-31", poster: "1990.jpg" }
+
+  "Best of 2000s":
+    template: { name: Decade, num: "014", imdb: "2000-01-01,2009-12-31", poster: "2000.jpg" }
+
+  "Best of 2010s":
+    template: { name: Decade, num: "015", imdb: "2010-01-01,2019-12-31", poster: "2010.jpg" }
+
+  "Best of 2020s":
+    template: { name: Decade, num: "016", imdb: "2020-01-01,2029-12-31", poster: "2020.jpg" }
+
+#####################################################
+#                   Best of Year                    #
+#####################################################
+
+  "Best of 2013":
+    template: { name: Best of, num: "017", year: "2013", poster: "2013.jpg" }
+  
+  "Best of 2014":
+    template: { name: Best of, num: "018", year: "2014", poster: "2014.jpg" }
+
+  "Best of 2015":
+    template: { name: Best of, num: "019", year: "2015", poster: "2015.jpg" }
+
+  "Best of 2016":
+    template: { name: Best of, num: "020", year: "2016", poster: "2016.jpg" }
+
+  "Best of 2017":
+    template: { name: Best of, num: "021", year: "2017", poster: "2017.jpg" }
+
+  "Best of 2018":
+    template: { name: Best of, num: "022", year: "2018", poster: "2018.jpg" }
+
+  "Best of 2019":
+    template: { name: Best of, num: "023", year: "2019", poster: "2019.jpg" }
+
+  "Best of 2020":
+    template: { name: Best of, num: "024", year: "2020", poster: "2020.jpg" }
+
+  "Best of 2021":
+    template: { name: Best of, num: "025", year: "2021", poster: "2021.jpg" }
+
+  "Best of 2022":
+    template: { name: Best of, num: "026", year: "2022", poster: "2022.jpg" }

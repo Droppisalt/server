@@ -1,0 +1,28 @@
+Aloha_Alona:
+    With Collection "title":
+        Worlds of DC
+            https://theposterdb.com/set/86746
+        Batman
+            https://theposterdb.com/set/87044
+        The Dark Knight
+            https://theposterdb.com/set/87166
+        Suicide Squad
+            https://theposterdb.com/poster/139299
+        Superman
+            https://theposterdb.com/poster/85383
+        Watchmen
+            https://theposterdb.com/poster/139221
+        Wonder Woman
+            https://theposterdb.com/poster/139303
+    Without Collection "title":
+        The Emperor's New Groove
+            https://theposterdb.com/set/70086
+        Alice in Wonderland
+            https://theposterdb.com/set/70226
+    
+
+CmdrRiker:
+    Pixar Set
+        https://theposterdb.com/set/97122
+    Happy Feet
+        https://theposterdb.com/set/95419

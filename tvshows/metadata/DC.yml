@@ -1,0 +1,14 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+##Peacemaker
+  "Peacemaker":
+    sort_title: "Peacemaker"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/207480
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/207481
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/207482

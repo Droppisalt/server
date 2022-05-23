@@ -1,0 +1,64 @@
+templates:
+  Set:
+    optional:
+      - collection
+      - movie
+      - tmdb_list
+      - imdb
+      - poster
+    tmdb_collection_details: <<collection>>
+    tmdb_movie: <<movie>>
+    tmdb_list: <<tmdb_list>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +4_<<collection_name>>
+
+collections:
+  "Ant-Man":
+    template: { name: Set, collection: 422834, poster: 162374 }
+  "Avengers":
+    template: { name: Set, collection: 86311, poster: 162376 }
+  "Black Panther":
+    template: { name: Set, collection: 529892, poster: 162378 }
+  "Blade":
+    template: { name: Set, collection: 735, poster: 171125 }
+  "Captain America":
+    template: { name: Set, collection: 131295, poster: 162381 }
+  "Captain Marvel":
+    template: { name: Set, collection: 623911, poster: 162387 }
+  "Daredevil":
+    template: { name: Set, movie: "9480, 9947", poster: 171145 }
+  "Deadpool":
+    template: { name: Set, movie: "293660, 383498, 533535, 567604", poster: 171133 }
+  "Doctor Strange":
+    template: { name: Set, collection: 618529, poster: 162388 }
+  "Fantastic Four":
+    template: { name: Set, collection: 9744, poster: 171129 }
+  "Ghost Rider":
+    template: { name: Set, collection: 90306, poster: 171142 }
+  "Guardians of the Galaxy":
+    template: { name: Set, collection: 284433, poster: 162393 }
+  "Iron Man":
+    template: { name: Set, collection: 131292, poster: 162395 }
+  "Punisher":
+    template: { name: Set, movie: "8867, 7220, 13056, 120605", poster: 171137 }
+  "Spider-Man":
+    template: { name: Set, collection: 556, poster: 171148 }
+  "Amazing Spider-Man":
+    template: { name: Set, collection: 125574, poster: 171152 }
+  "Spider-Man (Avengers)":
+    template: { name: Set, collection: 531241, poster: 171853 }
+  "Spider-Man: Spider-Verse":
+    template: { name: Set, collection: 573436, poster: 236029 }
+  "Spider-Man Universe":
+    template: { name: Set, collection: "531241, 125574, 556, 573436", poster: 162401 }
+  "Thor":
+    template: { name: Set, collection: 131296, poster: 162406 }
+  "Venom":
+    template: { name: Set, collection: 558216, poster: 162407 }
+  "Wolverine":
+    template: { name: Set, collection: 453993, poster: 171121 }
+  "X-Men":
+    template: { name: Set, collection: 748, poster: 171112 }

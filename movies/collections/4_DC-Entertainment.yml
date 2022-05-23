@@ -31,7 +31,7 @@ collections:
     sort_title: "Batman"
   "RED": 
     template: { name: Set, collection: 163902, poster: 166409 }
-  "Suicide Squad": ##Not CmdrRiker
+  "Suicide Squad":
     template: { name: Set, collection: 531242, poster: 139299 }
   "Superman": ##Not CmdrRiker
     template: { name: Set, collection: "8537, 209131", poster: 85383 }
@@ -39,7 +39,5 @@ collections:
     template: { name: Set, collection: 87228, poster: 162403 }
   "Watchmen": ##Not CmdrRiker
     template: { name: Set, list: 8196349, poster: 139221 }
-  "Wonder Woman": ##Not CmdrRiker
+  "Wonder Woman":
     template: { name: Set, collection: 468552, poster: 139303 }
-  "Worlds of DC": ##Not CmdrRiker
-    template: { name: Set, imdb: "ls538267100", poster: 139195 }

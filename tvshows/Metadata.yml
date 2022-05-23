@@ -72,11 +72,11 @@ metadata:               #Posters found here https://theposterdb.com/user/musikma
   "The Falcon and the Winter Soldier":
     sort_title: "Falcon and Winter Soldier"
     year: 2021
-    url_poster: https://theposterdb.com/api/assets/170970
+    url_poster: https://theposterdb.com/api/assets/152651
     seasons:
       1:
         title: "Season 001"
-        url_poster: https://theposterdb.com/api/assets/192801
+        url_poster: https://theposterdb.com/api/assets/152652
 
   "Firefly":
     sort_title: "Firefly"
@@ -102,11 +102,11 @@ metadata:               #Posters found here https://theposterdb.com/user/musikma
   "Hawkeye":
     sort_title: "Hawkeye"
     year: 2021
-    url_poster: https://theposterdb.com/api/assets/192798
+    url_poster: https://theposterdb.com/api/assets/188617
     seasons:
       1:
         title: "Season 001"
-        url_poster: https://theposterdb.com/api/assets/192799
+        url_poster: https://theposterdb.com/api/assets/191907
 
   "The Legend of Tarzan":
     sort_title: "Legend of Tarzan"
@@ -121,11 +121,11 @@ metadata:               #Posters found here https://theposterdb.com/user/musikma
   "Loki":
     sort_title: "Loki"
     year: 2021
-    url_poster: https://theposterdb.com/api/assets/170972
+    url_poster: https://theposterdb.com/api/assets/157141
     seasons:
       1:
         title: "Season 001"
-        url_poster: https://theposterdb.com/api/assets/192800
+        url_poster: https://theposterdb.com/api/assets/157142
 
   "The Mandalorian":
     sort_title: "Mandalorian"
@@ -142,11 +142,11 @@ metadata:               #Posters found here https://theposterdb.com/user/musikma
   "Moon Knight":
     sort_title: "Moon Knight"
     year: 2022
-    url_poster: https://theposterdb.com/api/assets/218191
+    url_poster: https://theposterdb.com/api/assets/213371
     seasons:
       1:
         title: "Season 001"
-        url_poster: https://theposterdb.com/api/assets/218192
+        url_poster: https://theposterdb.com/api/assets/213372
         
   "Marvel's Agents of S.H.I.E.L.D.":
     sort_title: "Agents of SHIELD"
@@ -759,21 +759,33 @@ metadata:               #Posters found here https://theposterdb.com/user/musikma
       11:
         title: "Season 011"
         url_poster: https://theposterdb.com/api/assets/218119
+
+  "WHIH Newsfront (2015)":
+    sort_title: "WHIH Newsfront"
+    year: 2015
+    url_poster: https://theposterdb.com/api/assets/152621
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/152622
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/152623
         
   "WandaVision":
     sort_title: "WandaVision"
     year: 2021
-    url_poster: https://theposterdb.com/api/assets/170971
+    url_poster: https://theposterdb.com/api/assets/152615
     seasons:
       1:
         title: "Season 001"
-        url_poster: https://theposterdb.com/api/assets/192802
+        url_poster: https://theposterdb.com/api/assets/152616
         
   "What If...?":
     sort_title: "What If"
     year: 2021
-    url_poster: https://theposterdb.com/api/assets/170973
+    url_poster: https://theposterdb.com/api/assets/162814
     seasons:
       1:
         title: "Season 001"
-        url_poster: https://theposterdb.com/api/assets/192803
+        url_poster: https://theposterdb.com/api/assets/162815

@@ -12,7 +12,7 @@ templates:                                      #Source: https://www.hollywoodsc
     sync_mode: sync
     collection_order: release
     url_poster: https://theposterdb.com/api/assets/<<poster>>
-    sort_title: +4_<<collection_name>>
+    sort_title: +5_<<collection_name>>
     trakt_list: https://trakt.tv/users/<<trakt>>
 
 

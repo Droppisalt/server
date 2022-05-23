@@ -23,7 +23,7 @@ collections:
   "Black Panther":
     template: { name: Set, collection: 529892, poster: 162378 }
   "Blade":
-    template: { name: Set, collection: 735, poster: 171125 }
+    template: { name: Set, collection: 735, poster: 152610 }
   "Captain America":
     template: { name: Set, collection: 131295, poster: 162381 }
   "Captain Marvel":
@@ -53,11 +53,13 @@ collections:
   "Spider-Man: Spider-Verse":
     template: { name: Set, collection: 573436, poster: 236029 }
   "Spider-Man Universe":
-    template: { name: Set, collection: "531241, 125574, 556, 573436", poster: 162401 }
+    template: { name: Set, collection: "531241, 125574, 556, 573436", poster: 152257 }
+  "Team Thor":
+    template: { name: Set, collection: 729425, poster: 208210 }
   "Thor":
     template: { name: Set, collection: 131296, poster: 162406 }
   "Venom":
-    template: { name: Set, collection: 558216, poster: 162407 }
+    template: { name: Set, collection: 558216, poster: 182881 }
   "Wolverine":
     template: { name: Set, collection: 453993, poster: 171121 }
   "X-Men":

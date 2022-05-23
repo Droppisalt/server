@@ -44,6 +44,9 @@ collections:
   "DC - In Association With":
     template: { name: Studio, list: 8203427, poster: 152053 }
     summary: "Movies based on DC Comics properties not part of the DC Expanded Universe (DCEU)"
+
+  "Worlds of DC":
+    template: { name: Studio, imdb: "ls538267100", poster: 139195 }
     
   "Disney Animation Studios":
     template: { name: Studio, company: 3, imdb: "ls059383351", poster: 162732 }

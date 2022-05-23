@@ -10,7 +10,7 @@ templates:
     sync_mode: sync
     collection_order: alpha
     url_poster: https://theposterdb.com/api/assets/<<poster>>
-    sort_title: +5_<<collection_name>>
+    sort_title: +6_<<collection_name>>
 
 collections:
 ######################################################

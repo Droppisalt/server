@@ -4,20 +4,22 @@ templates:
       - collection
       - movie
       - list
-      - trakt
-      - imdb
+      - person
       - company
+      - imdb
+      - trakt
+      - poster
     tmdb_collection_details: <<collection>>
     tmdb_movie_details: <<movie>>
     tmdb_list: <<list>>
     tmdb_person_details: <<person>>
     tmdb_company_details: <<company>>
     imdb_list: https://www.imdb.com/list/<<imdb>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
     sync_mode: sync
     collection_order: release
     url_poster: https://theposterdb.com/api/assets/<<poster>>
     sort_title: +4_<<collection_name>>
-    trakt_list: https://trakt.tv/users/<<trakt>>
 
 collections:
   "28... Later":

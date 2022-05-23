@@ -1,0 +1,779 @@
+metadata:               #Posters found here https://theposterdb.com/user/musikmann2000
+
+  "Band of Brothers":
+    sort_title: "Band of Brothers"
+    year: 2001
+    url_poster: https://theposterdb.com/api/assets/218218
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/218219
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/218220
+
+  "Better Call Saul":
+    sort_title: "Better Call Saul"
+    year: 2015
+    url_poster: https://theposterdb.com/api/assets/198024
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/198025
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/198026
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/198027
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/198028
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/198029
+
+  "The Bad Batch":
+    sort_title: "Bad Batch"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/174478
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225823
+
+  "The Book of Boba Fett":
+    sort_title: "Book of Boba Fett"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/200213
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/200214
+
+  "Chucky":
+    sort_title: "Chucky"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/210340
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/210341
+
+  "The Cuphead Show!":
+    sort_title: "Cuphead Show"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/222318
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/222319
+
+  "The Falcon and the Winter Soldier":
+    sort_title: "Falcon and Winter Soldier"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/170970
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/192801
+
+  "Firefly":
+    sort_title: "Firefly"
+    year: 2002
+    url_poster: https://theposterdb.com/api/assets/185523
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: ""
+
+  "Halo":
+    sort_title: "Halo"
+    year: 2014
+    url_poster: https://theposterdb.com/api/assets/225843
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/225844
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/225845
+
+  "Hawkeye":
+    sort_title: "Hawkeye"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/192798
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/192799
+
+  "The Legend of Tarzan":
+    sort_title: "Legend of Tarzan"
+    year: 2001
+    url_poster: https://theposterdb.com/api/assets/191248
+    seasons:
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Loki":
+    sort_title: "Loki"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/170972
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/192800
+
+  "The Mandalorian":
+    sort_title: "Mandalorian"
+    year: 2019
+    url_poster: https://theposterdb.com/api/assets/174476
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/200215
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/200216
+        
+  "Moon Knight":
+    sort_title: "Moon Knight"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/218191
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/218192
+        
+  "Marvel's Agents of S.H.I.E.L.D.":
+    sort_title: "Agents of SHIELD"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/216597
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/216598
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/216599
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/216600
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/216601
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/216602
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/216603
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/216604
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/216605
+
+  "The Pacific":
+    sort_title: "Pacific"
+    year: 2010
+    url_poster: https://theposterdb.com/api/assets/218221
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/218222
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/218223
+
+  "Salem's Lot (2004)":
+    sort_title: "Salem's Lot (2004)"
+    year: 2004
+    url_poster: https://theposterdb.com/api/assets/172252
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: ""
+        
+  "Salem's Lot (1979)":
+    sort_title: "Salem's Lot (1979)"
+    year: 1979
+    url_poster: https://theposterdb.com/api/assets/172251
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: ""
+
+  "Sherlock":
+    sort_title: "Sherlock"
+    year: 2010
+    url_poster: https://theposterdb.com/api/assets/191408
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/191409
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/191410
+      2:
+        title: "Season 02"
+        url_poster: https://theposterdb.com/api/assets/191411
+      3:
+        title: "Season 03"
+        url_poster: https://theposterdb.com/api/assets/191412
+      4:
+        title: "Season 04"
+        url_poster: https://theposterdb.com/api/assets/191413
+
+  "Squid Game":
+    sort_title: "Squid Game"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/218062
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/218063
+
+  "Star Trek":
+    sort_title: "Star Trek"
+    year: 1966
+    url_poster: https://theposterdb.com/api/assets/175969
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222244
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222245
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222246
+
+  "Star Trek: The Next Generation":
+    sort_title: "Star Trek: The Next Generation"
+    year: 1987
+    url_poster: https://theposterdb.com/api/assets/175970
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222250
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222251
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222252
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222253
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222254
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/222255
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/222256
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/222257
+        
+  "Star Trek: Deep Space Nine":
+    sort_title: "Star Trek: Deep Space Nine"
+    year: 1992
+    url_poster: https://theposterdb.com/api/assets/175971
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222258
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222259
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222260
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222261
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222262
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/222263
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/222264
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/222265
+        
+  "Star Trek: Voyager":
+    sort_title: "Star Trek: Voyager"
+    year: 1995
+    url_poster: https://theposterdb.com/api/assets/175972
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222266
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222267
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222268
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222269
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222270
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/222271
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/222272
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/222273
+        
+  "Star Trek: Enterprise":
+    sort_title: "Star Trek: Enterprise"
+    year: 2001
+    url_poster: https://theposterdb.com/api/assets/175973
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222274
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222275
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222276
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222277
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222278
+        
+  "Star Trek: Discovery":
+    sort_title: "Star Trek: Discovery"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/175974
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222156
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222157
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222158
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/222159
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/222160
+        
+  "Star Trek: Picard":
+    sort_title: "Star Trek: Picard"
+    year: 2020
+    url_poster: https://theposterdb.com/api/assets/175975
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/218152
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/218153
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/218154
+        
+  "Star Trek: The Animated Series":
+    sort_title: "Star Trek: The Animated Series"
+    year: 1973
+    url_poster: https://theposterdb.com/api/assets/175976
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222247
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222248
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222249
+        
+  "Star Trek: Lower Decks":
+    sort_title: "Star Trek: Lower Decks"
+    year: 2020
+    url_poster: https://theposterdb.com/api/assets/175977
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222167
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/222168
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/222169
+
+  "Peacemaker":
+    sort_title: "Peacemaker"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/207480
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/207481
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/207482
+        
+  "Star Wars: Clone Wars":
+    sort_title: "Star Wars: Clone Wars"
+    year: 2003
+    url_poster: https://theposterdb.com/api/assets/174479
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+      3:
+        title: "Season 003"
+        
+  "Star Wars: The Clone Wars":
+    sort_title: "Star Wars: Clone Wars"
+    year: 2008
+    url_poster: https://theposterdb.com/api/assets/174473
+    seasons:
+      0:
+        title: "Specials"
+        url_poster:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225836
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/225837
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/225838
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/225839
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/225840
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/225841
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/225842
+        
+  "Star Wars: Droids":
+    sort_title: "Star Wars: Droids"
+    year: 1985
+    url_poster: https://theposterdb.com/api/assets/174477
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/225847
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225848
+        
+  "Star Wars: Ewoks":
+    sort_title: "Star Wars: Ewoks"
+    year: 1985
+    url_poster: https://theposterdb.com/api/assets/174490
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars: Forces of Destiny":
+    sort_title: "Star Wars: Forces of Destiny"
+    year: 2017
+    url_poster: https://theposterdb.com/api/assets/174488
+    seasons: 
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars Galaxy of Adventures":
+    sort_title: "Star Wars Galaxy of Adventures"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/174491
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars Rebels":
+    sort_title: "Star Wars Rebels"
+    year: 2014
+    url_poster: https://theposterdb.com/api/assets/174474
+    seasons: 
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+      3:
+        title: "Season 003"
+      4:
+        title: "Season 004"
+    
+  "Star Wars Resistance":
+    sort_title: "Star Wars Resistance"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/174475
+    seasons:
+      0:
+        title: "Specials"
+      1:
+        title: "Season 001"
+      2:
+        title: "Season 002"
+        
+  "Star Wars: Visions":
+    sort_title: "Star Wars: Visions"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/175206
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/225814
+
+  "Stargate Atlantis":
+    sort_title: "Stargate Atlantis"
+    year: 2004
+    url_poster: https://theposterdb.com/api/assets/228935
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/228936
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/228937
+      2:
+        title: "Season 02"
+        url_poster: https://theposterdb.com/api/assets/228938
+      3:
+        title: "Season 03"
+        url_poster: https://theposterdb.com/api/assets/228939
+      4:
+        title: "Season 04"
+        url_poster: https://theposterdb.com/api/assets/228940
+
+  "Stargate Infinity":
+    sort_title: "Stargate Infinity"
+    year: 2002
+    url_poster: https://theposterdb.com/api/assets/228942
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/228943
+
+  "Stargate Origins":
+    sort_title: "Stargate Origins"
+    year: 2018
+    url_poster: https://theposterdb.com/api/assets/228944
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/228945
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/228946
+
+  "Stargate SG-1":
+    sort_title: "Stargate SG-1"
+    year: 1997
+    url_poster: https://theposterdb.com/api/assets/228947
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/228948
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/228949
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/228950
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/228951
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/228952
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/228953
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/228954
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/228955
+      8:
+        title: "Season 008"
+        url_poster: https://theposterdb.com/api/assets/228956
+      9:
+        title: "Season 009"
+        url_poster: https://theposterdb.com/api/assets/228957
+      10:
+        title: "Season 010"
+        url_poster: https://theposterdb.com/api/assets/228958
+
+  "Stargate Universe":
+    sort_title: "Stargate Universe"
+    year: 2009
+    url_poster: https://theposterdb.com/api/assets/228959
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/228960
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/228961
+      2:
+        title: "Season 02"
+        url_poster: https://theposterdb.com/api/assets/228962
+
+  "Under the Dome":
+    sort_title: "Under the Dome"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/172261
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: ""
+      2:
+        title: "Season 02"
+        url_poster: ""
+      3:
+        title: "Season 03"
+        url_poster: ""
+
+  "Vikings":
+    sort_title: "Vikings"
+    year: 2013
+    url_poster: https://theposterdb.com/api/assets/222379
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/222380
+      1:
+        title: "Season 01"
+        url_poster: "https://theposterdb.com/api/assets/222381"
+      2:
+        title: "Season 02"
+        url_poster: "https://theposterdb.com/api/assets/222382"
+      3:
+        title: "Season 03"
+        url_poster: "https://theposterdb.com/api/assets/222383"
+      4:
+        title: "Season 04"
+        url_poster: https://theposterdb.com/api/assets/222384
+      5:
+        title: "Season 05"
+        url_poster: https://theposterdb.com/api/assets/222385
+      6:
+        title: "Season 06"
+        url_poster: https://theposterdb.com/api/assets/222386
+
+  "Vikings: Valhalla":
+    sort_title: "Vikings: Valhalla"
+    year: 2022
+    url_poster: https://theposterdb.com/api/assets/222388
+    seasons:
+      1:
+        title: "Season 01"
+        url_poster: https://theposterdb.com/api/assets/222389
+
+  "The Walking Dead":
+    sort_title: "Walking Dead"
+    year: 2010
+    url_poster: https://theposterdb.com/api/assets/218107
+    seasons:
+      0:
+        title: "Specials"
+        url_poster: https://theposterdb.com/api/assets/218108
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/218109
+      2:
+        title: "Season 002"
+        url_poster: https://theposterdb.com/api/assets/218110
+      3:
+        title: "Season 003"
+        url_poster: https://theposterdb.com/api/assets/218111
+      4:
+        title: "Season 004"
+        url_poster: https://theposterdb.com/api/assets/218112
+      5:
+        title: "Season 005"
+        url_poster: https://theposterdb.com/api/assets/218113
+      6:
+        title: "Season 006"
+        url_poster: https://theposterdb.com/api/assets/218114
+      7:
+        title: "Season 007"
+        url_poster: https://theposterdb.com/api/assets/218115
+      8:
+        title: "Season 008"
+        url_poster: https://theposterdb.com/api/assets/218116
+      9:
+        title: "Season 009"
+        url_poster: https://theposterdb.com/api/assets/218117
+      10:
+        title: "Season 010"
+        url_poster: https://theposterdb.com/api/assets/218118
+      11:
+        title: "Season 011"
+        url_poster: https://theposterdb.com/api/assets/218119
+        
+  "WandaVision":
+    sort_title: "WandaVision"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/170971
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/192802
+        
+  "What If...?":
+    sort_title: "What If"
+    year: 2021
+    url_poster: https://theposterdb.com/api/assets/170973
+    seasons:
+      1:
+        title: "Season 001"
+        url_poster: https://theposterdb.com/api/assets/192803

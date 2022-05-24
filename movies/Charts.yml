@@ -1,0 +1,56 @@
+templates:
+  Chart:
+    optional:
+      - poster
+      - trakt
+    sort_title: +1_<<num>><<collection_name>>
+    sync_mode: sync
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+
+collections:
+######################################################
+#          Charts Collections - Droppisalt           #
+######################################################
+  "Newly Released Movies":
+    template: { name: Chart, num: "001", trakt: "garycrawfordgc/lists/latest-releases" }
+    url_poster: "https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/chart/Newly%20Released%20Movies.jpg"
+    summary: "Latest releases"
+  "Top 10 Movies of The Week":
+    template: { name: Chart, num: "002", trakt: "giladg/lists/top-10-movies-of-the-week?sort=percentage,asc" }
+    summary: "Top 10 Movies of The Week"
+  "Trending":
+    template: { name: Chart, num: "003", poster: 213570 }
+    trakt_trending: 10
+    tmdb_trending_daily: 10
+    tmdb_trending_weekly: 10
+    summary: Movies Trending across the internet
+  "Popular":
+    template: { name: Chart, num: "004", poster: 213575 }
+    tmdb_popular: 40
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short
+      limit: 40
+    summary: "Popular Movies across the internet"
+  "Top Rated":
+    template: { name: Chart, num: "006", poster: 213605 }
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250
+    collection_order: custom
+    tmdb_top_rated: 250
+    summary: "Top Rated Movies across the internet"
+  "IMDb Top 250":
+    template: { name: Chart, num: "007" }
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=250&sort=user_rating,desc
+    url_poster: "https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/chart/IMDb Top 250 Movies.jpg"
+    collection_order: custom
+    summary: "Top 250 Movies on IMDb"
+  "IMDb Top 100 Superhero Movies":
+    template: { name: Chart, num: "008" }
+    imdb_list: https://www.imdb.com/list/ls008583762/?sort=user_rating,desc
+    collection_order: custom
+    summary: "Top 100 Superhero Movies"
+  "IMDb Top 100 Film Noir":
+    template: { name: Chart, num: "009" }
+    imdb_list: https://www.imdb.com/list/ls027489496/?sort=user_rating,desc
+    collection_order: custom
+    summary: "Top 100 Film Noir Movies"

@@ -2,16 +2,18 @@ templates:
   Actor:
     optional:
       - poster
-      - actor
     tmdb_actor_details: <<actor>>
+#      tmdb_director_details: <<person>>
+#      tmdb_writer_details: <<person>>
+#      tdmb_producer_details: <<person>>
     sync_mode: sync
     collection_order: alpha
     url_poster: https://theposterdb.com/api/assets/<<poster>>
-    sort_title: +5_<<collection_name>>
+    sort_title: +6_<<collection_name>>
 
 collections:
 ######################################################
-#           Actor Collections - Droppisalt           #
+#                Actor Collections                   #
 ######################################################
   Adam Driver:
     template: { name: Actor, actor: 1023139 }
@@ -503,6 +505,6 @@ collections:
   Zack Snyder:
     template: { name: Actor, actor: 15217 }
   Zendaya:
-    template: { name: Actor, actor: 505710 }
+    tempalte: { name: Actor, actor: 505710 }
   Zoe Saldana:
     template: { name: Actor, actor: 8691 }

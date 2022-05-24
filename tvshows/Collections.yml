@@ -1,0 +1,31 @@
+templates:
+  Set:
+    optional:
+      - collection
+      - list
+      - trakt
+      - imdb
+      - tv
+    tmdb_show: <<tv>>
+    tmdb_list: <<list>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +5_<<collection_name>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+
+collections:
+######################################################
+#                  TV Collections                    #
+######################################################
+  "Stephen King Adaptations":
+    template: { name: Set, imdb: "ls560402173", poster: 164836 }
+  "Stargate":
+    template: { name: Set, tv: "4629, 2290, 5148, 72925, 72925" }
+  "Star Trek":
+    template: { name: Set, imdb: "ls003269814", poster: 222279 }
+  "Star Wars":
+    template: { name: Set, imdb: "ls064950838", poster: 164120 }
+  "Tarzan (Animation)":
+    template: { name: Set, tv: 2395, poster: 191248 }

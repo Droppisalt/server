@@ -1,0 +1,47 @@
+templates:
+  Best of:
+    optional:
+      - poster
+    trakt_list: https://trakt.tv/users/lish408/lists/rotten-tomatoes-best-of-<<year>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sort_title: +1_<<num>>Best of <<year>>
+    sync_mode: sync
+    summary: Rotten Tomatoes Best Movies of <<year>>
+    smart_label: audience_rating.desc
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/year/best/<<year>>
+
+collections:
+#####################################################
+#                   Best of Year                    #
+#####################################################
+
+  "Best of 2013":
+    template: { name: Best of, num: "017", imdb: ls057563436, year: 2013, poster: "2013.jpg" }
+    trakt_list: ""
+  
+  "Best of 2014":
+    template: { name: Best of, num: "018", year: "2014", poster: "2014.jpg" }
+
+  "Best of 2015":
+    template: { name: Best of, num: "019", year: "2015", poster: "2015.jpg" }
+
+  "Best of 2016":
+    template: { name: Best of, num: "020", year: "2016", poster: "2016.jpg" }
+
+  "Best of 2017":
+    template: { name: Best of, num: "021", year: "2017", poster: "2017.jpg" }
+
+  "Best of 2018":
+    template: { name: Best of, num: "022", year: "2018", poster: "2018.jpg" }
+
+  "Best of 2019":
+    template: { name: Best of, num: "023", year: "2019", poster: "2019.jpg" }
+
+  "Best of 2020":
+    template: { name: Best of, num: "024", year: "2020", poster: "2020.jpg" }
+
+  "Best of 2021":
+    template: { name: Best of, num: "025", year: "2021", poster: "2021.jpg" }
+
+  "Best of 2022":
+    template: { name: Best of, num: "026", year: "2022", poster: "2022.jpg" }

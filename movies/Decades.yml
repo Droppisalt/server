@@ -1,0 +1,38 @@
+templates:
+  Decade:
+    optional:
+      - poster
+    sort_title: +1_<<num>><<collection_name>>
+    sync_mode: sync
+    collection_order: custom
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/decade/best/<<poster>>
+    url_background: https://wallpapercave.com/wp/wp4016022.jpg
+    imdb_list:
+      - url: https://www.imdb.com/search/title/?title_type=feature,short&release_date=<<imdb>>&num_votes=10000,&sort=user_rating,desc
+        limit: 100
+
+collections:
+#####################################################
+#         Decade Collections - Droppisalt           #
+#####################################################
+
+  "Best of 1960s":
+    template: { name: Decade, num: "010", imdb: "1960-01-01,1969-12-31", poster: "1960.jpg" }
+
+  "Best of 1970s":
+    template: { name: Decade, num: "011", imdb: "1970-01-01,1979-12-31", poster: "1970.jpg" }
+
+  "Best of 1980s":
+    template: { name: Decade, num: "012", imdb: "1980-01-01,1989-12-31", poster: "1980.jpg" }
+
+  "Best of 1990s":
+    template: { name: Decade, num: "013", imdb: "1990-01-01,1999-12-31", poster: "1990.jpg" }
+
+  "Best of 2000s":
+    template: { name: Decade, num: "014", imdb: "2000-01-01,2009-12-31", poster: "2000.jpg" }
+
+  "Best of 2010s":
+    template: { name: Decade, num: "015", imdb: "2010-01-01,2019-12-31", poster: "2010.jpg" }
+
+  "Best of 2020s":
+    template: { name: Decade, num: "016", imdb: "2020-01-01,2029-12-31", poster: "2020.jpg" }

@@ -1,0 +1,1629 @@
+templates:
+  Holiday:
+    optional:
+      - poster
+      - imdb
+    smart_label: random
+    summary: |-
+      A timed collection of <<collection_name>> and other movies that may relate to the holiday.
+      
+      NOTE: this collection will only be around until <<end_date>>.
+    sort_title: +0_<<collection_name>>
+    schedule: range(<<start_date>>-<<end_date>>)
+    delete_not_scheduled: true
+    visible_home: true
+    visible_shared: true
+    #url_poster: https://theposterdb.com/api/assets/<<poster>>
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/<<poster>>.jpg
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+
+  Chart:
+    optional:
+      - poster
+      - trakt
+    sort_title: +1_<<num>><<collection_name>>
+    sync_mode: sync
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+    
+  Best of:
+    optional:
+      - poster
+    trakt_list: https://trakt.tv/users/lish408/lists/rotten-tomatoes-best-of-<<year>>
+    sort_title: +1_<<num>>Best of <<year>>
+    sync_mode: sync
+    summary: Rotten Tomatoes Best Movies of <<year>>
+    smart_label: audience_rating.desc
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/year/best/<<year>>
+
+  Decade:
+    optional:
+      - poster
+    sort_title: +1_<<num>><<collection_name>>
+    sync_mode: sync
+    collection_order: custom
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/decade/best/<<poster>>
+    url_background: https://wallpapercave.com/wp/wp4016022.jpg
+    imdb_list:
+      - url: https://www.imdb.com/search/title/?title_type=feature,short&release_date=<<imdb>>&num_votes=10000,&sort=user_rating,desc
+        limit: 100
+
+  Award:
+    sort_title: +2_001<<collection_name>>
+    sync_mode: sync
+    smart_label: audience_rating.desc
+    url_poster: https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/<<poster>>.jpg
+    #schedule: weekly (monday)
+
+  Genre:
+      optional:
+        - poster
+      plex_search:
+        genre: <<genre>>
+      url_poster: https://theposterdb.com/api/assets/<<poster>>
+      sort_title: +2_002<<collection_name>>
+      collection_order: alpha
+
+  Special Genre:
+      optional:
+        - poster
+      url_poster: https://theposterdb.com/api/assets/<<poster>>
+      sort_title: +2_<<collection_name>>
+      collection_order: release
+
+  Set:
+    optional:
+      - collection
+      - movie
+      - list
+      - person
+      - company
+      - imdb
+      - trakt
+      - poster
+    tmdb_collection_details: <<collection>>
+    tmdb_movie_details: <<movie>>
+    tmdb_list: <<list>>
+    tmdb_person_details: <<person>>
+    tmdb_company_details: <<company>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    trakt_list: https://trakt.tv/users/<<trakt>>
+    sync_mode: sync
+    collection_order: release
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +4_<<collection_name>>
+
+  Actor:
+    optional:
+      - poster
+      - actor
+    tmdb_actor_details: <<actor>>
+    sync_mode: sync
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
+    sort_title: +5_<<collection_name>>
+
+collections:
+######################################################
+#         Holiday Collections - meisnate12           #
+######################################################
+  Christmas Movies:
+    template: { name: Holiday, start_date: 12/01, end_date: 12/31, imdb: "ls000096828" }
+    url_poster: https://theposterdb.com/api/assets/150836
+    
+  Halloween Movies: ##Not CmdrRiker
+    template: { name: Holiday, start_date: 10/01, end_date: 10/31, imdb: "ls023118929, ls000099714", poster: "seasonal/halloween" }
+    tmdb_collection:
+      - 91361    # Halloween Collection
+      - 8581     # A Nightmare on Elm Street Collection
+      - 1733     # The Mummy Collection
+      - 8091     # Alien Collection
+    tmdb_movie:
+      - 23437    # A Nightmare on Elm Street (2010)
+      
+  New Year's Day Movies: ##Not CmdrRiker
+    template: { name: Holiday, start_date: 12/26, end_date: 01/04, imdb: "ls066838460", poster: "seasonal/years" }
+  
+  St. Patrick's Day Movies: ##Not CmdrRiker
+    template: { name: Holiday, start_date: 03/01, end_date: 03/18, imdb: "ls063934595", poster: "seasonal/patrick" }
+  
+  Star Wars Month: ##Not CmdrRiker
+    template: { name: Holiday, start_date: 05/01, end_date: 05/31, imdb: "ls095606938" }
+    url_poster: "https://theposterdb.com/api/assets/235015"
+  
+  Thanksgiving Movies: ##Not CmdrRiker
+    template: { name: Holiday, start_date: 11/01, end_date: 11/30, imdb: "ls000835734, ls091597850", poster: "seasonal/thanksgiving" }
+  
+  Valentine's Day Movies: ##Not CmdrRiker
+    template: { name: Holiday, start_date: 02/01, end_date: 02/29, imdb: "ls000094398, ls057783436, ls064427905", poster: "seasonal/valentine" }
+
+######################################################
+#          Lists Collections - Droppisalt            #
+######################################################
+  "Newly Released Movies":
+    template: { name: Chart, num: "001", trakt: "garycrawfordgc/lists/latest-releases" }
+    url_poster: "https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/chart/Newly%20Released%20Movies.jpg"
+    summary: "Latest releases"
+  
+  "Top 10 Movies of The Week":
+    template: { name: Chart, num: "002", trakt: "giladg/lists/top-10-movies-of-the-week?sort=percentage,asc" }
+    summary: "Top 10 Movies of The Week"
+  
+  "Trending":
+    template: { name: Chart, num: "003", poster: 213570 }
+    trakt_trending: 10
+    tmdb_trending_daily: 10
+    tmdb_trending_weekly: 10
+    summary: Movies Trending across the internet
+    
+  "Popular":
+    template: { name: Chart, num: "004", poster: 213575 }
+    tmdb_popular: 40
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short
+      limit: 40
+    summary: "Popular Movies across the internet"
+  
+  "Top Rated":
+    template: { name: Chart, num: "006", poster: 213605 }
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250
+    collection_oder: custom
+    tmdb_top_rated: 250
+    summary: "Top Rated Movies across the internet"
+
+  "IMDb Top 250":
+    template: { name: Chart, num: "007" }
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=250&sort=user_rating,desc
+    url_poster: "https://raw.githubusercontent.com/bullmoose20/Plex-Meta-Manager-Images/master/chart/IMDb Top 250 Movies.jpg"
+    collection_order: custom
+    summary: "Top 250 Movies on IMDb"
+
+  "IMDb Top 100 Superhero Movies":
+    template: { name: Chart, num: "008" }
+    imdb_list: https://www.imdb.com/list/ls008583762/?sort=user_rating,desc
+    collection_order: custom
+    summary: "Top 100 Superhero Movies"
+  
+  "IMDb Top 100 Film Noir":
+    template: { name: Chart, num: "009" }
+    imdb_list: https://www.imdb.com/list/ls027489496/?sort=user_rating,desc
+    collection_order: custom
+    summary: "Top 100 Film Noir Movies"
+    
+#####################################################
+#         Decade Collections - Droppisalt           #
+#####################################################
+
+  "Best of 1960s":
+    template: { name: Decade, num: "010", imdb: "1960-01-01,1969-12-31", poster: "1960.jpg" }
+
+  "Best of 1970s":
+    template: { name: Decade, num: "011", imdb: "1970-01-01,1979-12-31", poster: "1970.jpg" }
+
+  "Best of 1980s":
+    template: { name: Decade, num: "012", imdb: "1980-01-01,1989-12-31", poster: "1980.jpg" }
+
+  "Best of 1990s":
+    template: { name: Decade, num: "013", imdb: "1990-01-01,1999-12-31", poster: "1990.jpg" }
+
+  "Best of 2000s":
+    template: { name: Decade, num: "014", imdb: "2000-01-01,2009-12-31", poster: "2000.jpg" }
+
+  "Best of 2010s":
+    template: { name: Decade, num: "015", imdb: "2010-01-01,2019-12-31", poster: "2010.jpg" }
+
+  "Best of 2020s":
+    template: { name: Decade, num: "016", imdb: "2020-01-01,2029-12-31", poster: "2020.jpg" }
+
+#####################################################
+#                   Best of Year                    #
+#####################################################
+
+  "Best of 2013":
+    template: { name: Best of, num: "017", year: "2013", poster: "2013.jpg" }
+  
+  "Best of 2014":
+    template: { name: Best of, num: "018", year: "2014", poster: "2014.jpg" }
+
+  "Best of 2015":
+    template: { name: Best of, num: "019", year: "2015", poster: "2015.jpg" }
+
+  "Best of 2016":
+    template: { name: Best of, num: "020", year: "2016", poster: "2016.jpg" }
+
+  "Best of 2017":
+    template: { name: Best of, num: "021", year: "2017", poster: "2017.jpg" }
+
+  "Best of 2018":
+    template: { name: Best of, num: "022", year: "2018", poster: "2018.jpg" }
+
+  "Best of 2019":
+    template: { name: Best of, num: "023", year: "2019", poster: "2019.jpg" }
+
+  "Best of 2020":
+    template: { name: Best of, num: "024", year: "2020", poster: "2020.jpg" }
+
+  "Best of 2021":
+    template: { name: Best of, num: "025", year: "2021", poster: "2021.jpg" }
+
+  "Best of 2022":
+    template: { name: Best of, num: "026", year: "2022", poster: "2022.jpg" }
+
+#####################################################
+#          Awards Collections - Droppisalt          #
+#####################################################
+  Oscars Winners:
+    template: { name: Award, poster: "award/oscars/winner" } 
+    imdb_list: "https://www.imdb.com/search/title/?title_type=feature,documentary&groups=oscar_winner"
+    summary: "Oscar Winning Movies"
+    #schedule: yearly (03/28)
+  
+  Oscars Best Picture Winners:
+    template: { name: Award, poster: "award/oscars/best_picture_winner" }
+    imdb_list: https://www.imdb.com/search/title/?count=250&groups=oscar_best_picture_winners&sort=year,desc
+    summary: "The Academy Award for Best Picture is one of the Academy Awards presented annually by the Academy of Motion Picture Arts and Sciences since the awards debuted in 1929."
+    #schedule: yearly (03/28)
+ 
+  Oscars Nominated:
+    template: { name: Award, poster: "award/oscars/nomination" } 
+    trakt_list: https://trakt.tv/users/jcbwoldseth/lists/oscar-race-2022
+    summary: 2022 Oscar nominations
+         
+#  Cannes - Palme d'or:
+#    template: { name: Award, poster: "award/cannes/winner" }  
+#    trakt_list: https://trakt.tv/users/sp1ti/lists/cannes-palme-d-or-winners
+#    summary: "The Palme d'Or is the highest prize awarded at the Cannes Film Festival. It was introduced in 1955 by the organising committee."
+#    #schedule: yearly (06/01)
+# 
+#  Cesar:
+#    template: { name: Award, poster: "award/cesar/winner" } 
+#    trakt_list: https://trakt.tv/users/fauxliege/lists/cesar-meilleur-film
+#    summary: "The César Award is the national film award of France. It is delivered in the Nuit des César ceremony and was first awarded in 1976."
+#    #schedule: yearly (03/14)
+#
+#  Berlinale:
+#    template: { name: Award, "award/berlinale/winner" } 
+#    trakt_list: https://trakt.tv/users/maxwelldeux/lists/berlin-international-film-festival-golden-bears
+#    summary: "The Berlin International Film Festival, usually called the Berlinale, is a film festival held annually in Berlin, Germany."
+#    #schedule: yearly (02/21)
+
+  BAFTA Best Films:
+    template: { name: Award, poster: "award/bafta/winner" } 
+    trakt_list: https://trakt.tv/users/maxwelldeux/lists/bafta-award-best-film
+    summary: "The EE British Academy Film Awards or BAFTA Film Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film."
+    #schedule: yearly (02/21)
+
+#  Venice:
+#    template: { name: Award, poster: "award/venice/winner" } 
+#    trakt_list: https://trakt.tv/users/maxwelldeux/lists/venice-film-festival-golden-lion
+#    summary: "The Venice Film Festival or Venice International Film Festival (Italian: Mostra Internazionale d'Arte Cinematografica della Biennale di Venezia is the world's oldest film festival"
+#    #schedule: yearly (02/21)
+
+#####################################################
+#          Genres Collections - Droppisalt          #
+#####################################################
+  Action:
+    template: {name: Genre, genre: Action, poster: 52018}
+    summary: Action film is a genre wherein physical action takes precedence in the storytelling. The film will often have continuous motion and action including physical stunts, chases, fights, battles, and races. The story usually revolves around a hero that has a goal, but is facing incredible odds to obtain it.
+  Adventure:
+    template: {name: Genre, genre: Adventure, poster: 52218}
+    summary: Adventure film is a genre that revolves around the conquests and explorations of a protagonist. The purpose of the conquest can be to retrieve a person or treasure, but often the main focus is simply the pursuit of the unknown. These films generally take place in exotic locations and play on historical myths. Adventure films incorporate suspenseful puzzles and intricate obstacles that the protagonist must overcome in order to achieve the end goal.  
+  Animation:
+    template: {name: Genre, genre: Animation, poster: 120090}
+    summary: Animated film is a collection of illustrations that are photographed frame-by-frame and then played in a quick succession. Since its inception, animation has had a creative and imaginative tendency. Being able to bring animals and objects to life, this genre has catered towards fairy tales and children’s stories. However, animation has long been a genre enjoyed by all ages. As of recent, there has even been an influx of animation geared towards adults. Animation is commonly thought of as a technique, thus it’s ability to span over many different genres.
+#  Anime:
+#    template: {name: Genre, genre: Anime, poster: 126743}
+#    summary: A collection of Anime movies
+  Biography:
+    template: {name: Genre, genre: Biography, poster: 60369}
+    summary: A collection of Biography movies
+  Comedy:
+    template: {name: Genre, genre: Comedy, poster: 51397}
+    summary: Comedy is a genre of film that uses humor as a driving force. The aim of a comedy film is to illicit laughter from the audience through entertaining stories and characters. Although the comedy film may take on some serious material, most have a happy ending. Comedy film has the tendency to become a hybrid sub-genre because humor can be incorporated into many other genres. Comedies are more likely than other films to fall back on the success and popularity of an individual star.
+  Crime:
+    template: {name: Genre, genre: Crime, poster: 53057}
+    summary: Crime film is a genre that revolves around the action of a criminal mastermind. A Crime film will often revolve around the criminal himself, chronicling his rise and fall. Some Crime films will have a storyline that follows the criminal's victim, yet others follow the person in pursuit of the criminal. This genre tends to be fast paced with an air of mystery – this mystery can come from the plot or from the characters themselves.
+  Documentary:
+    template: {name: Genre, genre: Documentary, poster: 51430}
+    summary: Documentary film is a non-fiction genre intended to document reality primarily for the purposes of instruction, education, or maintaining a historical record.
+  Drama:
+    template: {name: Genre, genre: Drama, poster: 52016}
+    summary: Drama film is a genre that relies on the emotional and relational development of realistic characters. While Drama film relies heavily on this kind of development, dramatic themes play a large role in the plot as well. Often, these dramatic themes are taken from intense, real life issues. Whether heroes or heroines are facing a conflict from the outside or a conflict within themselves, Drama film aims to tell an honest story of human struggles.
+  Family:
+    template: {name: Genre, genre: Family, poster: 53059}
+    summary: Fantasy film is a genre that incorporates imaginative and fantastic themes. These themes usually involve magic, supernatural events, or fantasy worlds. Although it is its own distinct genre, these films can overlap into the horror and science fiction genres. Unlike science fiction, a fantasy film does not need to be rooted in fact. This element allows the audience to be transported into a new and unique world. Often, these films center on an ordinary hero in an extraordinary situation.
+  Fantasy:
+    template: {name: Genre, genre: Animation, poster: 51476}
+    imdb_list:
+    - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=fantasy
+      limit: 100
+    - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=fantasy&sort=user_rating,desc
+      limit: 100
+    summary: Fantasy film is a genre that incorporates imaginative and fantastic themes. These themes usually involve magic, supernatural events, or fantasy worlds. Although it is its own distinct genre, these films can overlap into the horror and science fiction genres. Unlike science fiction, a fantasy film does not need to be rooted in fact. This element allows the audience to be transported into a new and unique world. Often, these films center on an ordinary hero in an extraordinary situation.
+  Gangster:
+    template: {name: Special Genre, poster: 62561}
+    imdb_list:
+      - https://www.imdb.com/list/ls026270180/
+      - https://www.imdb.com/list/ls000093502/
+    summary: Gangster film is a sub-genre of crime films that center on organized crime or the mafia. Often the plot revolves around the rise and fall of an organized crime leader. Many Gangster films explore the destructive nature of organized crime, while others attempt to show the humanity of the individual characters.
+  History:
+    template: {name: Genre, genre: History, poster: 58022}
+    summary: History film is a genre that takes historical events and people and interprets them in a larger scale. Historical accuracy is not the main focus, but rather the telling of a grandiose story. The drama of an History film is often accentuated by a sweeping musical score, lavish costumes, and high production value.
+  Horror:
+    template: {name: Genre, genre: Horror, poster: 51475}
+    summary: Horror film is a genre that aims to create a sense of fear, panic, alarm, and dread for the audience. These films are often unsettling and rely on scaring the audience through a portrayal of their worst fears and nightmares. Horror films usually center on the arrival of an evil force, person, or event. Many Horror films include mythical creatures such as ghosts, vampires, and zombies. Traditionally, Horror films incorporate a large amount of violence and gore into the plot. Though it has its own style, Horror film often overlaps into Fantasy, Thriller, and Science-Fiction genres.
+  Martial Arts:
+    template: {name: Special Genre, poster: 51773}
+    imdb_list:
+      - https://www.imdb.com/list/ls000099643/
+      - https://www.imdb.com/list/ls068611186/
+      - https://www.imdb.com/list/ls068378513/
+      - https://www.imdb.com/list/ls090404120/
+    summary: Martial Arts film is a sub-genre of action films that feature numerous martial arts combat between characters. These combats are usually the films' primary appeal and entertainment value, and often are a method of storytelling and character expression and development. Martial Arts are frequently featured in training scenes and other sequences in addition to fights. Martial Arts films commonly include other types of action, such as hand-to-hand combat, stuntwork, chases, and gunfights.  
+  Music:
+    template: {name: Special Genre, poster: 51398}
+    imdb_list:
+    - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=music
+      limit: 200
+    - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=music&sort=user_rating,desc
+      limit: 200
+    summary: Music film is genre that revolves around music being an integral part of the characters lives.
+  Musical:
+    template: {name: Genre, genre: Musical, poster: 51427}
+    summary: A Musical interweaves vocal and dance performances into the narrative of the film. The songs of a film can either be used to further the story or simply enhance the experience of the audience. These films are often done on a grand scale and incorporate lavish costumes and sets. Traditional musicals center on a well-known star, famous for their dancing or singing skills (i.e. Fred Astaire, Gene Kelly, Judy Garland). These films explore concepts such are love and success, allowing the audience to escape from reality.
+  Mystery:
+    template: {name: Genre, genre: Mystery, poster: 53060}
+    summary: A Mystery film centers on a person of authority, usually a detective, that is trying to solve a mysterious crime. The main protagonist uses clues, investigation, and logical reasoning. The biggest element in these films is a sense of “whodunit” suspense, usually created through visual cues and unusual plot twists.
+  Pandemic:
+    template: {name: Special Genre, poster: 55837}
+    imdb_list: https://www.imdb.com/list/ls092321048/
+    summary: A Pandemic film resolves around widespread viruses, plagues, and diseases.
+  Romance:
+    template: {name: Genre, genre: Romance, poster: 53062}
+    summary: "Romance film can be defined as a genre wherein the plot revolves around the love between two protagonists. This genre usually has a theme that explores an issue within love, including but not limited to: love at first sight, forbidden love, love triangles, and sacrificial love. The tone of Romance film can vary greatly. Whether the end is happy or tragic, Romance film aims to evoke strong emotions in the audience."
+  Science Fiction:
+    template: {name: Genre, genre: Science Fiction, poster: 51772}
+    summary: Science Fiction (Sci-Fi) film is a genre that incorporates hypothetical, science-based themes into the plot of the film. Often, this genre incorporates futuristic elements and technologies to explore social, political, and philosophical issues. The film itself is usually set in the future, either on earth or in space. Traditionally, a Science Fiction film will incorporate heroes, villains, unexplored locations, fantastical quests, and advanced technology.
+  Short:
+    template: {name: Genre, genre: Short, poster: 53063}
+    summary: A collection of Short movies
+  Sports:
+    template: {name: Genre, genre: Sport, poster: 60371}
+    imdb_list:
+    - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=sport
+      limit: 200
+    - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=sport&sort=user_rating,desc
+      limit: 200
+    summary: A Sport Film revolves around a sport setting, event, or an athlete. Often, these films will center on a single sporting event that carries significant importance. Sports films traditionally have a simple plot that builds up to the significant sporting event. This genre is known for incorporating film techniques to build anticipation and intensity. Sport films have a large range of sub-genres, from comedies to dramas, and are more likely than other genres to be based true-life events.
+  Stand Up Comedy:
+    template: {name: Special Genre, poster: 49137}
+    imdb_list:
+      - https://www.imdb.com/list/ls070221411/
+      - https://www.imdb.com/list/ls086584751/
+      - https://www.imdb.com/list/ls086022668/
+      - https://www.imdb.com/list/ls049792208/
+    summary: Stand-up comedy is a comedic style in which a comedian performs in front of a live audience, speaking directly to them through a microphone. Comedians give the illusion that they are dialoguing, but in actuality, they are monologuing a grouping of humorous stories, jokes and one-liners, typically called a shtick, routine, act, or set. Some stand-up comedians use props, music or magic tricks to enhance their acts. Stand-up comedians perform quasi-autobiographical and fictionalized extensions of their offstage selves.
+  Sword & Sorcery:
+    template: {name: Special Genre, poster: 74604}
+    imdb_list: https://www.imdb.com/list/ls022909805
+    summary: Sword and Sorcery film is a sub-genre of Fantasy that tend to be more plot-driven. These films rely on heavy action and battle scenes. Common themes in Sword and Sorcery films include a rescue mission, saving a princess, and battling a fantastical monster. The worlds and characters in these films are often much less developed than in other fantasy sub-genres. Of all the Fantasy sub-genres, Sword and Sorcery is most likely to be geared towards a younger audience, as many of these films are animated.
+  Thriller:
+    template: {name: Genre, genre: Thriller, poster: 52019}
+    summary: Thriller Film is a genre that revolves around anticipation and suspense. The aim for Thrillers is to keep the audience alert and on the edge of their seats. The protagonist in these films is set against a problem – an escape, a mission, or a mystery. No matter what sub-genre a Thriller film falls into, it will emphasize the danger that the protagonist faces. The tension with the main problem is built on throughout the film and leads to a highly stressful climax.
+  War:
+    template: {name: Genre, genre: War, poster: 51477}
+    summary: War Film is a genre that looks at the reality of war on a grand scale. They often focus on landmark battles as well as political issues within war. This genre usually focuses on a main character and his team of support, giving the audience an inside look into the gritty reality of war.
+  Western:
+    template: {name: Genre, genre: Western, poster: 51774}
+    summary: "Western Film is a genre that revolves around stories primarily set in the late 19th century in the American Old West. Most Westerns are set between the American Civil War (1865) and the early 1900s. Common themes within Western Film include: the conquest of the wild west, the cultural separation of the East and the West, the West’s resistance to modern change, the conflict between Cowboys and Indians, outlaws, and treasure/gold hunting. American Western Film usually revolves around a stoic hero and emphasizes the importance of honor and sacrifice."
+
+######################################################
+#          Studio Collections - Droppisalt           #
+######################################################
+
+  "Aardman": ##Not CmdrRiker
+    template: { name: Studio, company: 297, poster: 192938 }
+    summary: "Aardman Animations, Ltd. is a British animation studio based in Bristol, England. Aardman is known for films made using stop-motion clay animation techniques, particularly those featuring Plasticine characters Wallace and Gromit."
+  "Blue Sky":
+    template: { name: Studio, company: 9383, poster: 156455 }
+    summary: "Blue Sky Studios, Inc. was an American computer animation film studio based in Greenwich, Connecticut. It was a subsidiary of 20th Century Animation, a division of Disney Studios Content."
+  "DC Entertainment": ##Not CmdrRiker
+    template: { name: Studio, company: "9993, 128064", poster: 92689 }
+    summary: "DC Entertainment is an American entertainment company founded in September 2009 and based in Burbank, California. The company is a subsidiary of Warner Bros. Entertainment."
+  "DC Animated Movies":
+    template: { name: Studio, list: 8203426, poster: 159246 }
+    summary: "The DC Universe Animated Original Movies (also known as DC Universe Original Movies or DC Universe Movies) are direct-to-video film projects being created by Warner Premiere, Warner Bros. Animation, and DC Comics. These more recent movie projects have also included many of the voice actors who worked on previous DC animated series and films."
+  "DC Universe Originals":
+    template: { name: Studio, list: 8203428, poster: 139526 }
+    summary: "DC Universe Originals are a collection of DC TV shows on DC's online streaming service, DC Universe."
+  "DC - In Association With":
+    template: { name: Studio, list: 8203427, poster: 152053 }
+    summary: "Movies based on DC Comics properties not part of the DC Expanded Universe (DCEU)"
+  "Worlds of DC":
+    template: { name: Studio, imdb: "ls538267100", poster: 139195 }
+  "Disney Animation Studios":
+    template: { name: Studio, company: 3, imdb: "ls059383351", poster: 162732 }
+    summary: "Walt Disney Animation Studios (WDAS), sometimes shortened to Disney Animation, is an American animation studio that creates animated features and short films for The Walt Disney Company. Founded on October 16, 1923 by brothers Walt Disney and Roy O. Disney, it is one of the oldest-running animation studios in the world. It is currently organized as a division of Walt Disney Studios and is headquartered at the Roy E. Disney Animation Building at the Walt Disney Studios lot in Burbank, California."
+  "Disney Live Action Studios":
+    template: { name: Studio, imdb: "ls077114097", poster: 161323 }
+    summary: "Walt Disney Pictures is an American film production studio of The Walt Disney Studios, which is owned by The Walt Disney Company. The studio is the flagship producer of live-action feature films within the Walt Disney Studios unit, and is based at the Walt Disney Studios in Burbank, California. Animated films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand. Walt Disney Studios Motion Pictures distributes and markets the films produced by Walt Disney Pictures."
+  "DreamWorks":
+    template: { name: Studio, company: 521, poster: 148022 }
+#    filters:
+#      collection.not: Aardman
+    summary: "DreamWorks Animation LLC (also simply known as DreamWorks) is an American animation studio and a subsidiary of Universal Pictures, itself a subsidiary of Comcast's NBCUniversal. It is based in Glendale, California, and produces animated feature films, television programs, and online virtual games."
+  "Happy Madison Productions":
+    template: { name: Studio, company: 878, poster: 154926 }
+    summary: "Happy Madison Productions is an American film and television production company founded in 1999 by Adam Sandler, which is best known for its comedy films."
+  "Illumination Entertainment":
+    template: { name: Studio, company: 6704, poster: 155752 }
+    summary: "Illumination is an American film and animation studio founded by Chris Meledandri in 2007 and owned by Universal Pictures, a division of NBCUniversal, which is itself a division of Comcast. Meledandri produces the films, while Universal finances and distributes all the films. The studio is responsible for the Despicable Me and The Secret Life of Pets franchises and the film adaptations of Dr. Seuss’ books The Lorax and How the Grinch Stole Christmas. The Minions, characters from the Despicable Me series, are the studio's mascots."
+  "Laika Studios": ##Not CmdrRiker
+    template: { name: Studio, company: 11537, poster: 179823 }
+  "Lucasfilm": ##Not CmdrRiker
+    template: { name: Studio, company: 1, poster: 206133 }
+    summary: "Lucasfilm Ltd. LLC is an American film and television production company and a subsidiary of Walt Disney Studios. The studio is best known for creating and producing the Star Wars and Indiana Jones franchises, as well as its leadership in developing special effects, sound, and computer animation for films."
+  "Marvel Cinematic Universe":
+    template: { name: Studio, list: 8194961, poster: 152304 }
+    summary: "The Marvel Cinematic Universe is a media franchise and shared universe centered on a series of superhero films produced by Marvel Studios. The films are based on characters that appear in comic books published by Marvel Comics."
+  "Marvel Entertainment": ##Not CmdrRiker
+    template: { name: Studio, company: "7505, 19551, 420", poster: 113197 }
+    summary: "Marvel Entertainment, LLC is a wholly owned subsidiary of The Walt Disney Company, and is mainly known for its comic books by Marvel Comics, as well as its forays into films, including those within the Marvel Cinematic Universe (MCU)."
+  "Marvel Legacy Collection":
+    template: { name: Studio, list: 8203429, poster: 164105 }
+    summary: "Marvel legacy movies are a set of American superhero film series based on the fictional characters of X-Men, who originally appeared in comic books created by Stan Lee and Jack Kirby and published by Marvel Comics."
+  "Marvel - In Assocation With": ##Not CmdrRiker
+    template: { name: Studio, imdb: "ls560473387", poster: 171159 }
+    summary: "Movies based on Marvel Comics properties not produced by Marvel Studios"
+  "Marvel One-Shots":
+    template: { name: Studio, movie: "76122, 76535, 119569, 211387, 253980", poster: 162414 }
+    summary: "Special features in the MCU films' Blu-ray and digital distribution releases, but are not included in the DVD releases. The films, which range from 4 to 15 minutes, are designed to be self-contained stories that provide more backstory for characters or events introduced in the films. Two of the shorts have been the inspiration for television series set in the MCU."
+  "Pixar":
+    template: { name: Studio, company: 3, poster: 158741 }
+    summary: "Pixar Animation Studios, commonly known as Pixar, is an American computer animation studio based in Emeryville, California, a subsidiary of Disney Studios Content owned by The Walt Disney Company. Pixar began in 1979 as part of the Lucasfilm computer division, known as the Graphics Group, before its spin-off as a corporation on February 3, 1986, with funding from Apple co-founder Steve Jobs, who became its majority shareholder. Disney purchased Pixar in 2006 at a valuation of $7.4 billion by converting each share of Pixar stock to 2.3 shares of Disney stock, a transaction that resulted in Jobs becoming Disney's largest single shareholder at the time. Pixar is best known for its feature films technologically powered by RenderMan, the company's own implementation of the industry-standard RenderMan Interface Specification image-rendering application programming interface. Luxo Jr., a desk lamp from the studio's 1986 short film of the same name, is the studio's mascot."
+  "Studio Ghibli": ##Not CmdrRiker
+    template: { name: Studio, company: 10342, poster: 230931 }
+    summary: "Studio Ghibli Inc. is a Japanese animation film studio headquartered in Koganei, Tokyo. The studio is best known for its animated feature films, and has also produced several short films, television commercials, and one television film. The studio’s mascot and most recognizable symbol is the character, Totoro, a giant cat-like spirit from the 1988 classic, My Neighbor Totoro."
+  "Sony Pictures Animation":
+    template: { name: Studio, company: 2251, poster: 157022 }
+    summary: "Sony Pictures Animation Inc. is an American animation studio owned by Sony Entertainment's Sony Pictures Entertainment through their Motion Picture Group division and founded on May 9, 2002. The studio's films are distributed worldwide by Sony Pictures Releasing under their Columbia Pictures label, while all direct-to-video releases are released by Sony Pictures Home Entertainment."
+  "Warner Animation Group": ##Not CmdrRiker
+    template: { name: Studio, company: 25120, poster: 193028 }
+    summary: "The Warner Animation Group (WAG) is an American animation studio that is the feature animation division of Warner Bros. Entertainment. Established on January 7, 2013, the studio is the successor to the dissolved 2D traditional hand-drawn animation studio Warner Bros. Feature Animation, which shut down in 2003 and the dissolved family film division Warner Bros. Family Entertainment, which shut down in 2009. The entity is also a sister animation studio of the regular animation studio Warner Bros. Animation"
+
+######################################################
+#           Movie Collections - Droppisalt           #
+######################################################
+
+  "28... Later":
+    template: { name: Set, collection: 1565, poster: 160782 }
+  "30 Days of Night":
+    template: { name: Set, collection: 91660, poster: 160780 }
+  "300":
+    template: { name: Set, collection: 125570, poster: 162103 }
+#  "A24":
+#    template: { name: Set, company: 41077, poster: 166234 }
+  "Ace Ventura":
+    template: { name: Set, collection: 3167, poster: 165778 }
+  "Alice in Wonderland": ##Not CmdrRiker
+    template: { name: Set, collection: 261307, poster: 162010 }
+  "Alien":
+    template: { name: Set, collection: "8091, 115762, 135416", poster: 168446 }
+  "Almighty":
+    template: { name: Set, collection: 124949, poster: 162011 }
+  "The Amazing Spider-Man":
+    template: { name: Set, collection: 125574, poster: 171152 }
+    sort_title: "+4_Amazing Spider-Man"
+  "Anchorman":
+    template: { name: Set, collection: 93791, poster: 166225 }
+  "Angry Birds":
+    template: { name: Set, collection: 531315, poster: 178907 }
+  "Annabelle":
+    template: { name: Set, collection: 402074, poster: 92649 }
+  "Ant-Man":
+    template: { name: Set, collection: 422834, poster: 162374 }
+  "Aquaman":  ##Not CmdrRiker
+    template: { name: Set, collection: 573693, poster: 162375 }
+  "Avengers":
+    template: { name: Set, collection: 86311, poster: 162376 }
+  "AVP":
+    template: { name: Set, collection: 115762, poster: 94686 }
+    sort_title: "+4_Alien Vs Predator"
+  "Back to the Future":
+    template: { name: Set, collection: 264, poster: 163128 }
+  "Bad Boys":
+    template: { name: Set, collection: 14890, poster: 163544 }
+  "Bad Santa":
+    template: { name: Set, collection: 423173, poster: 168205 }
+  "Batman": ##Not CmdrRiker
+    template: { name: Set, collection: 120794, poster: 139790 }
+  "The Batman":
+    template: { name: Set, collection: 948485, poster: 218193 }
+    sort_title: "+4_Batman"
+  "Black Panther":
+    template: { name: Set, collection: 529892, poster: 162378 }
+  "Blade":
+    template: { name: Set, collection: 735, poster: 152610 }
+  "Blade Runner":
+    template: { name: Set, trakt: "eloy86/lists/blade-runner-universe?sort=rank,asc", poster: 163611 }
+  "Boondock Saints":
+    template: { name: Set, collection: 87186, poster: 164184 }
+  "Boss Baby":
+    template: { name: Set, collection: 519457, poster: 163006 }
+  "Bourne":
+    template: { name: Set, collection: 31562, poster: 164761 }
+  "Borat":
+    template: { name: Set, collection: 747168, poster: 166230 }
+  "Captain America":
+    template: { name: Set, collection: 131295, poster: 162381 }
+  "Captain Marvel":
+    template: { name: Set, collection: 623911, poster: 162387 }
+  "Carrie":
+    template: { name: Set, collection: 257053, movie: 133805, poster: 160796 }
+  "Cars":
+    template: { name: Set, collection: 87118, poster: 212682 }
+  "Children of the Corn":
+    template: { name: Set, collection: 115225, poster: 160798 }
+  "Chronicles of Narnia":
+    template: { name: Set, collection: 420, poster: 162017 }
+  "Chronicles of Riddick":
+    template: { name: Set, collection: 2794, poster: 163647 }
+  "Cloverfield":
+    template: { name: Set, movie: "7191, 333371, 384521", poster: 215650 }
+  "Cloudy with a Chance of Meatballs":
+    template: { name: Set, collection: 177467, poster: 178904 }
+  "Collection of the Dead": ##Not CmdrRiker
+    template: { name: Set, list: 8196433, poster: 160803 }
+  "Conjuring":
+    template: { name: Set, collection: 313086, poster: 160833 }
+  "Conjuring Universe":
+    template: { name: Set, collection: "313086, 402074, 968052", movie: "480414", poster: 160843 }
+  "Cornetto Trilogy":
+    template: { name: Set, movie: "4638, 747, 107985", poster: 166234 }
+  "Creature From The Black Lagoon (Universal)":
+    template: { name: Set, collection: 221537, poster: 160867 }
+  "Creepshow":
+    template: { name: Set, collection: 107725, poster: 160848 }
+  "Croods":
+    template: { name: Set, collection: 464577, poster: 162999 }
+  "Cube":
+    template: { name: Set, collection: 432, poster: 160926 }
+  "Daimajin":
+    template: { name: Set, collection: 245334, poster: 160928 }
+  "Daredevil":
+    template: { name: Set, movie: "9480, 9947", poster: 171145 }
+  "The Dark Knight": ##Not CmdrRiker
+    template: { name: Set, collection: 263, poster: 140067 }
+    sort_title: "+4_Dark Knight"
+  "Deadpool":
+    template: { name: Set, movie: "293660, 383498, 533535, 567604", poster: 171133 }
+  "Despicable Me":
+    template: { name: Set, collection: 86066, poster: 163000 }
+  "Die Hard":
+    template: { name: Set, collection: 1570, poster: 164773 }
+  "Disney Live-Action Remakes":
+    template: { name: Set, trakt: "jyggen/lists/disney-live-action-remakes-of-animated-films?sort=released,desc", poster: 160938 }
+  "Doctor Strange":
+    template: { name: Set, collection: 618529, poster: 162388 }
+  "Don't Breathe":
+    template: { name: Set, collection: 748919, poster: 175434 }
+  "Doom":
+    template: { name: Set, collection: 634390, poster: 179772 }
+  "Dr. Seuss":
+    template: { name: Set, person: 65705, poster: 162035 }
+  "Dracula (Hammer)":
+    template: { name: Set, collection: 123724, poster: 160853 }
+  "Dracula (Universal)":
+    template: { name: Set, collection: 221539, poster: 160854 }
+  "Dumb and Dumber":
+    template: { name: Set, collection: 96665, poster: 165413 }
+  "Eastrail 177":
+    template: { name: Set, trakt: "jjmalpz/lists/unbreakable-trilogy?sort=released,desc", poster: 162389 }
+  "Emperor's New Groove":
+    template: { name: Set, collection: 178117, poster: 162998 }
+  "Equalizer":
+    template: { name: Set, collection: 523855, poster: 164777 }
+  "Exorcist":
+    template: { name: Set, collection: 12263, poster: 160872 }
+  "Expendables":
+    template: { name: Set, collection: 126125, poster: 164780 }
+  "Fantastic Beasts":
+    template: { name: Set, collection: 435259, poster: 173773 }
+  "Fantastic Four":
+    template: { name: Set, collection: 9744, poster: 171129 }
+  "Fast and the Furious":
+    template: { name: Set, trakt: "samhain79/lists/fast-and-the-furious-collection?sort=rank,asc", poster: 164783 }
+    ###collection: 9485
+  "Finding Nemo":
+    template: { name: Set, collection: 137697, poster: 162995 }
+  "Fly (1986)":
+    template: { name: Set, collection: 109609, poster: 177230 }
+  "Fox and the Hound":
+    template: { name: Set, collection: 100970, poster: 163001 }
+  "Frankenstein (Hammer)":
+    template: { name: Set, collection: 123720, poster: 161004 }
+  "Frankenstein (Universal)":
+    template: { name: Set, collection: 218406, poster: 161003 }
+  "Friday the 13th":
+    template: { name: Set, collection: 9735, movie: 13207, poster: 161007 }
+  "Frozen":
+    template: { name: Set, collection: 386382, poster: 162993 }
+  "Fugitive / U.S. Marshals":
+    template: { name: Set, movie: "5503, 11808", poster: 164845 }
+  "G.I. Joe":
+    template: { name: Set, collection: 135468, poster: 164787 }
+  "Gamera":
+    template: { name: Set, collection: "161766, 657313", poster: 160935 }
+  "Ghost Rider":
+    template: { name: Set, collection: 90306, poster: 171142 }
+  "Ghostbusters":
+    template: { name: Set, collection: 2980, poster: 174560 }
+  "Godfather":
+    template: { name: Set, collection: 230, poster: 164789 }
+  "Godzilla":
+    template: { name: Set, collection: "535313, 374509, 374511, 374512, 813157", poster: 160929 }
+  "Godzilla Anime Trilogy":
+    template: { name: Set, collection: 535790, poster: 200795 }
+  "Goosebumps":
+    template: { name: Set, collection: 508783, poster: 161010 }
+  "Gremlins":
+    template: { name: Set, collection: 89151, poster: 161052 }
+  "Grudge":
+    template: { name: Set, collection: 1974, movie: 465086, poster: 161051 }
+  "Guardians of the Galaxy":
+    template: { name: Set, collection: 284433, poster: 162393 }
+  "Halloween":
+    template: { name: Set, collection: 91361, poster: 161050 }
+  "Halloween (Rob Zombie Series)":
+    template: { name: Set, collection: 126209, poster: 177081 }
+  "Hammer Film Productions":
+    template: { name: Set, company: 1314, poster: 176820 }
+  "Hannibal Lecter":
+    template: { name: Set, collection: 9743, movie: 11454, poster: 164790 }
+  "Hangover":
+    template: { name: Set, collection: 86119, poster: 165414 }
+  "Harold & Kumar":
+    template: { name: Set, collection: 30663, poster: 165415 }
+  "Harry Potter":
+    template: { name: Set, collection: 1241, poster: 162216 }
+  "Hellboy":
+    template: { name: Set, collection: 17235, movie: 456740, poster: 162394 }
+  "Hercule Poirot":
+    template: { name: Set, collection: 735384, poster: 226035 }
+  "Hills Have Eyes (Original)":
+    template: { name: Set, collection: 267922, poster: 161044 }
+  "Hills Have Eyes (Reboot)":
+    template: { name: Set, collection: 8918, poster: 177338 }
+  "Hitman's Bodyguard":
+    template: { name: Set, collection: 608101, poster: 164793 }
+  "The Hobbit":
+    template: { name: Set, collection: 121938, poster: 187486 }
+    sort_title: "+4_Hobbit"
+  "Home Alone":
+    template: { name: Set, collection: 9888, poster: 168202 }
+  "Hotel Transylvania":
+    template: { name: Set, collection: 185103, poster: 178876 }
+  "How to Train Your Dragon":
+    template: { name: Set, collection: 89137, poster: 162990 }
+  "Human Centipede":
+    template: { name: Set, collection: 96671, poster: 212616 }
+  "Hunchback of Notre Dame":
+    template: { name: Set, collection: 97456, poster: 162989 }
+  "Hunger Games":
+    template: { name: Set, collection: 131635, poster: 163851 }
+  "Ice Age": ##Not CmdrRiker
+    template: { name: Set, collection: 8354, poster: 162988 }
+  "Incredibles":
+    template: { name: Set, collection: 468222, poster: 162987 }
+  "Independence Day":
+    template: { name: Set, collection: 304378, poster: 162515 }
+  "Indiana Jones":
+    template: { name: Set, collection: 84, poster: 163391 }
+  "Inner Sanctum Mysteries":
+    template: { name: Set, imdb: "ls042931690", poster: 165640 }
+  "Insidious":
+    template: { name: Set, collection: 228446, poster: 161059 }
+  "Inspector Gadget":
+    template: { name: Set, collection: 237445, poster: 173497 }
+  "Invisible Man (Universal)":
+    template: { name: Set, collection: 259401, poster: 161122 }
+  "Ip Man":
+    template: { name: Set, collection: 70068, poster: 160954 }
+  "Iron Man":
+    template: { name: Set, collection: 131292, poster: 162395 }
+  "It":
+    template: { name: Set, collection: 477962, poster: 161120 }
+  "Jack Reacher":
+    template: { name: Set, collection: 403374, poster: 164795}
+  "Jack Ryan":
+    template: { name: Set, collection: 192492, movie: "4614, 137094", poster: 162057 }
+  "Jackass":
+    template: { name: Set, collection: 17178, poster: 163419 }
+  "James Bond":
+    template: { name: Set, collection: 645, poster: 164797 }
+  "Jason Bourne":
+    template: { name: Set, collection: 31562, poster: 164761 }
+  "Jaws":
+    template: { name: Set, collection: 2366, poster: 161117 }
+  "Jeepers Creepers":
+    template: { name: Set, collection: 94899, poster: 185530}
+  "John Wick":
+    template: { name: Set, collection: 404609, poster: 164798 }
+  "Johnny English":
+    template: { name: Set, collection: 86117, poster: 164799 }
+  "Journey":
+    template: { name: Set, collection: 605516, poster: 162513 }
+  "Judge Dredd":
+    template: { name: Set, movie: "9482, 49049", poster: 162396 }
+  "Jumanji":
+    template: { name: Set, collection: 495527, movie: 6795, poster: 163392 }
+  "Jump Street":
+    template: { name: Set, collection: 212562, poster: 164800 }
+  "Jungle Book":
+    template: { name: Set, movie: "407436, 278927, 10714", poster: 163393 }
+  "Jungle Book (Animated)":
+    template: { name: Set, collection: 97459, poster: 162985 }
+  "Jurassic Park":
+    template: { name: Set, collection: 328, movie: 630322, poster: 162511 }
+  "Karate Kid":
+    template: { name: Set, collection: 8580, poster: 163394 }
+  "Kick-Ass":
+    template: { name: Set, collection: 179892, poster: 162397 }
+  "Kill Bill":
+    template: { name: Set, collection: 2883, poster: 164801 }
+  "King Ghidorah":
+    template: { name: Set, imdb: "ls077781208", poster: 160931 }
+  "King Kong":
+    template: { name: Set, collection: "135498", imdb: "ls070988313", poster: 160930 }
+  "Kingsman":
+    template: { name: Set, collection: 391860, movie: 476669, poster: 164805 }
+  "Kung Fu Panda":
+    template: { name: Set, collection: 77816, poster: 162983 }
+  "Lady and the Tramp":
+    template: { name: Set, collection: 97460, poster: 162982}
+  "Land Before Time":
+    template: { name: Set, collection: 19163, poster: 162981 }
+  "Last Exorcism":
+    template: { name: Set, collection: 177675, poster: 161110 }
+  "Laugh It Up, Fuzzball: The Family Guy Trilogy":
+    template: { name: Set, collection: 701402, poster: 162997 }
+  "Legally Blonde":
+    template: { name: Set, collection: 86024, poster: 166248 }
+  "Lego Movie":
+    template: { name: Set, collection: 325470, movie: "324849, 274862", poster: 163075 }
+  "Lethal Weapon":
+    template: { name: Set, collection: 945, poster: 164803 }
+  "Lilo & Stitch":
+    template: { name: Set, collection: 97461, poster: 163076 }
+  "Lion King":
+    template: { name: Set, collection: 94032, poster: 162978 }
+  "Lion King (Reboot)":
+    template: { name: Set, collection: 762512, poster: 163395 }
+  "Little Mermaid":
+    template: { name: Set, collection: 33085, poster: 162977 }
+  "The Lord of the Rings":
+    template: { name: Set, collection: 119, poster: 52722 }
+    sort_title: "+4_Lord of the Rings"
+  "Lord of the Rings (Animated)":
+    template: { name: Set, collection: 141290, movie: 123, poster: 187490 }
+  "Machete":
+    template: { name: Set, collection: 210006, poster: 164804 }
+  "Mad Max":
+    template: { name: Set, collection: 8945, poster: 184549 }
+  "Madagascar":
+    template: { name: Set, collection: 14740, poster: 162976 }
+  "Maleficent":
+    template: { name: Set, collection: 531331, poster: 162142 }
+  "Mall Cop":
+    template: { name: Set, collection: 328372, poster: 164815 }
+  "Mangler":
+    template: { name: Set, collection: 374418, poster: 172372 }
+  "Mask":
+    template: { name: Set, collection: 43072, poster: 187753 }
+  "Matrix":
+    template: { name: Set, collection: 2344, poster: 163913 }
+  "Maze Runner":
+    template: { name: Set, collection: 295130, poster: 160968 }
+  "Mechanic":
+    template: { name: Set, collection: 280504, poster: 164807 }
+  "Men In Black":
+    template: { name: Set, collection: 86055, poster: 163929 }
+  "Middle Earth":
+    template: { name: Set, list: 8195671, poster: 164138 }
+  "Mighty Ducks":
+    template: { name: Set, collection: 10709, poster: 192594 }
+  "Millennium":
+    template: { name: Set, collection: 24761, poster: 164808 }
+  "Minions":
+    template: { name: Set, collection: 544669, poster: 192196 }
+  "Mission: Impossible":
+    template: { name: Set, collection: 87359, poster: 164810 }
+  "Monsters":
+    template: { name: Set, collection: 306926, poster: 160970 }
+  "Monsters, Inc.":
+    template: { name: Set, collection: 137696, poster: 162975 }
+  "Monsterverse":
+    template: { name: Set, imdb: "ls060980695", poster: 160971 }
+  "Monty Python":
+    template: { name: Set, movie: "762, 583, 9267, 11949, 4543, 490949, 282268", poster: 166255 }
+  "Mortal Kombat":
+    template: { name: Set, collection: "9818, 931431", poster: 160972 }
+  "Mortal Kombat Legends":
+    template: { name: Set, collection: 848690, poster: 174034 }
+  "Mothra":
+    template: { name: Set, collection: 171732, imdb: "ls077534078", poster: 160933 }
+  "Mr. Bean":
+    template: { name: Set, collection: 103372, poster: 166257 }
+  "Mulan":
+    template: { name: Set, collection: 87236, poster: 162973 }
+  "The Mummy":
+    template: { name: Set, collection: 1733, poster: 161305 }
+    sort_title: "+4_Mummy"
+  "The Mummy (Hammer)":
+    template: { name: Set, collection: 138965, poster: 161303 }
+    sort_title: "+4_Mummy (Hammer)"
+  "The Mummy (Universal)":
+    template: { name: Set, collection: 221544, poster: 161304 }
+    sort_title: "+4_Mummy (Universal)"
+  "National Treasure":
+    template: { name: Set, collection: 52984, poster: 163397 }
+  "Night at the Museum":
+    template: { name: Set, colletion: 85943, poster: 162153 }
+  "Nightmare on Elm Street":
+    template: { name: Set, collection: 8581, movie: 23437, poster: 161307 }
+  "Now You See Me":
+    template: { name: Set, collection: 382685, poster: 164813 }
+#  "Nun":
+#    template: { name: Set, collection: 968051, poster: }
+  "Ocean's":
+    template: { name: Set, imdb: "ls029083335", poster: 164814 }
+  "Ouija":
+    template: { name: Set, collection: 426103, poster: 161308 }
+  "Open Season":
+    template: { name: Set, collection: 66761, poster: 178905 }
+  "Open Water":
+    template: { name: Set, collection: 86113, poster: 217732 }
+  "Pacific Rim":
+    template: { name: Set, collection: 363369, poster: 160976 }
+  "Paddington":
+    template: { name: Set, collection: 488924, poster: 232744 }
+  "Paranormal Activity":
+    template: { name: Set, collection: 41437, poster: 161310 }
+  "Phantom of the Opera":
+    template: { name: Set, list: "ls560424755", poster: 160977 }
+  "Percy Jackson":
+    template: { name: Set, collection: 179919, poster: 163402 }
+  "Pet Sematary":
+    template: { name: Set, collection: "10789, 830781", poster: 161311 }
+  "Peter Pan":
+    template: { name: Set, collection: 55422, poster: 162155 }
+  "Peter Rabbit":
+    template: { name: Set, collection: 595693, poster: 165298 }
+  "Pink Panther (Original)":
+    template: { name: Set, collection: 937, poster: 164817 }
+  "Pink Panther (Steve Martin)":
+    template: { name: Set, collection: 130440, poster: 213323 }
+  "Piranha":
+    template: { name: Set, collection: 212279, poster: 161300 }
+  "Piranha 3D":
+    template: { name: Set, collection: 104830, poster: 161299 }
+  "Pirates of the Caribbean":
+    template: { name: Set, collection: 295, poster: 163404 }
+  "Planes":
+    template: { name: Set, collection: 270252, poster: 199867 }
+  "Planet of the Apes (Reboot)":
+    template: { name: Set, collection: 173710, poster: 184312 }
+  "Pocahontas":
+    template: { name: Set, collection: 136214, poster: 191948 }
+  "Poltergeist":
+    template: { name: Set, collection: 10453, movie: 243688, poster: 161298 }
+  "Power Rangers":
+    template: { name: Set, collection: 708816, movie: 305470, poster: 163405 }
+  "Predator":
+    template: { name: Set, collection: 399, poster: 163975 }
+  "Psycho":
+    template: { name: Set, collection: 119674, poster: 161295 }
+  "Punisher":
+    template: { name: Set, movie: "8867, 7220, 13056, 120605", poster: 171137 }
+  "Purge":
+    template: { name: Set, collection: 256322, poster: 161881 }
+  "Quatermass (Hammer)":
+    template: { name: Set, collection: 123726, poster: 161292 }
+  "Quiet Place":
+    template: { name: Set, collection: 521226, poster: 160981 }
+  "Rambo":
+    template: { name: Set, collection: 5039, poster: 164821 }
+  "Ratatouille":
+    template: { name: Set, movie: "2062, 13061", poster: 162969 }
+  "RED": 
+    template: { name: Set, collection: 163902, poster: 166409 }
+  "Resident Evil":
+    template: { name: Set, collection: 17255, movie: 460458, poster: 161290 }
+  "Return of the Living Dead":
+    template: { name: Set, collection: 101471, poster: 161879 }
+  "Ride Along":
+    template: { name: Set, collection: 376650, poster: 164822 }
+  "Ring":
+    template: { name: Set, collection: 14563, poster: 161878 }
+  "Rio": ##Not CmdrRiker
+    template: { name: Set, collection: 229932, poster: 162967 }
+  "Road Trip":
+    template: { name: Set, collection: 96679, poster: 189032 }
+  "Robert Langdon":
+    template: { name: Set, collection: 115776, poster: 164823 }
+  "RoboCop":
+    template: { name: Set, collection: 5547, movie: 97020, poster: 164016 }
+  "Rocky / Creed":
+    template: { name: Set, collection: "1575, 553717", poster: 163422}
+  "Rodan":
+    template: { name: Set, imdb: "ls077130792", poster: 160934 }
+  "Rush Hour":
+    template: { name: Set, collection: 90863, poster: 164824 }
+  "Saw":
+    template: { name: Set, collection: 656, movie: 602734, poster: 161876 }
+  "Scary Movie":
+    template: { name: Set, collection: 4246, poster: 161875 }
+  "Scooby-Doo (Animated)":
+    tempalte: { name: Set, imdb: "ls565045079", movie: "740385, 48919", poster: 158984 }
+  "Scooby-Doo (Live Action)":
+    template: { name: Set, collection: "86860, 633815", movie: 489939, poster: 161874 }
+  "Scorpion King":
+    template: { name: Set, collection: 116669, poster: 162199 }
+  "Scream":
+    template: { name: Set, collection: 2602, poster: 161544 }
+  "Secret Life of Pets":
+    template: { name: Set, collection: 427084, poster: 162965 }
+  "Sharknado":
+    template: { name: Set, collection: 286023, poster: 162221 }
+  "Shaun the Sheep":
+    template: { name: Set, collection: 899158, poster: 162964 }
+  "Sherlock Holmes (Basil Rathbone)":
+    template: { name: Set, collection: 478628, poster: 232773 }
+  "Sherlock Holmes (Jeremy Brett)":
+    template: { name: Set, collection: 815282, poster: 232926 }
+  "Sherlock Holmes (Robert Downey Jr.)":
+    template: { name: Set, collection: 102322, psoter: 232932 }
+  "Sherlock Holmes (Others)":
+    template: { name: Set, movie: "29859, 497582, 829280, 426563, 280996, 34374, 42729, 11791, 29578, 27200, 11904", poster: 232945 }
+  "The Shining":
+    template: { name: Set, collection: 530064, poster: 161873 }
+    sort_title: "+4_Shining"
+  "Shrek":
+    template: { name: Set, collection: 2150, poster: 160988 }
+  "Sicario":
+    template: { name: Set, collection: 496796, poster: 164828 }
+  "Silent Hill":
+    template: { name: Set, collection: 64748, poster: 161872 }
+  "Sin City":
+    template: { name: Set, collection: 135179, poster: 162400 }
+  "Sinister":
+    template: { name: Set, collection: 357173, poster: 161871 }
+  "Sing":
+    template: { name: Set, collection: 544670, poster: 211343 }
+  "Smurfs (Theatrical)":
+    template: { name: Set, collection: 134897, poster: 162962 }
+  "Sometimes They Come Back":
+    template: { name: Set, collection: 168545, poster: 161868 }
+  "Sonic the Hedgehog":
+    template: { name: Set, collection: 720879, poster: 234937 }
+  "Space Jam":
+    template: { name: Set, collection: 722961, poster: 167165 }
+  "Space Odyssey Series":
+    template: { name: Set, collection: 4438, poster: 160992 }
+  "Spider-Man":
+    template: { name: Set, collection: 556, poster: 171148 }
+  "Spider-Man (Avengers)":
+    template: { name: Set, collection: 531241, poster: 171853 }
+  "Spider-Man: Spider-Verse":
+    template: { name: Set, collection: 573436, poster: 236029 }
+  "Spider-Man Universe":
+    template: { name: Set, collection: "531241, 125574, 556, 573436", poster: 152257 }
+  "Spirit":
+    template: { name: Set, collection: 806483, poster: 167856 }
+  "SpongeBob":
+    template: { name: Set, collection: 275402, poster: 162960 }
+  "Spy Kids":
+    template: { name: Set, collection: 86486, poster: 163410 }
+  "Stargate":
+    template: { name: Set, collection: 44215, movie: "2164, 932690", poster: 228932 }
+  "Star Trek":
+    template: { name: Set, collection: "151, 115570, 115575", poster: 164122 }
+  "Star Wars":
+    template: { name: Set, imdb: "ls064950838", poster: 164120 }
+  "Star Wars: The Ewok Adventures":
+    template: { name: Set, collection: 133830, poster: 163385 }
+  "Stephen King Adaptations":
+    template: { name: Set, imdb: "ls560406426", poster: 164836 }
+  "Suicide Squad":
+    template: { name: Set, collection: 531242, poster: 139299 }
+  "Superman": ##Not CmdrRiker
+    template: { name: Set, collection: "8537, 209131", poster: 85383 }
+  "Surf's Up":
+    template: { name: Set, collection: 436295, poster: 178906 }
+  "Swamp Thing": ##Not CmdrRiker
+    template: { name: Set, collection: 87228, poster: 162403 }
+  "Taken":
+    template: { name: Set, collection: 135483, poster: 164840 }
+  "Tangled":
+    template: { name: Set, movie: "38757, 82881, 438747", poster: 162959 }
+  "Tarzan (Animation)":
+    template: { name: Set, collection: 106768, poster: 162958 }
+  "Team Thor":
+    template: { name: Set, collection: 729425, poster: 208210 }
+  "Ted":
+    template: { name: Set, collection: 266672, poster: 166268 }
+  "Teenage Mutant Ninja Turtles":
+    template: { name: Set, collection: 1582, poster: 162404 }
+  "Teenage Mutant Ninja Turtles (Remake)":
+    template: { name: Set, collection: 401562, poster: 162405 }
+  "Terminator":
+    template: { name: Set, collection: 528, poster: 164119 }
+  "Texas Chainsaw Massacre":
+    template: { name: Set, collection: 111751, poster: 161860 }
+  "Texas Chainsaw (Reboot)":
+    template: { name: Set, collection: 425175, poster: 179571 }
+  "Thing":
+    template: { name: Set, collection: 479888, movie: 10785, poster: 161857 }
+  "Thor":
+    template: { name: Set, collection: 131296, poster: 162406 }
+  "Transporter":
+    template: { name: Set, collection: 9518, poster: 164843 }
+  "Trolls":
+    template: { name: Set, collection: 489724, poster: 162954 }
+  "Twilight":
+    template: { name: Set, collection: 33514, poster: 161853 }
+  "Tomb Raider":
+    template: { name: Set, collection: "2467, 621142", poster: 164983 }
+  "Tooth Fairy":
+    template: { name: Set, collection: 222634, poster: 175372 }
+  "Top Gun":
+    template: { name: Set, collection: 531330, poster: 196947 }
+  "Total Recall":
+    template: { name: Set, movie: "64635, 861", poster: 164125 }
+  "Toy Story":
+    template: { name: Set, collection: 10194, poster: 162955 }
+  "Train to Busan":
+    template: { name: Set, collection: 619537, movie: 389868, poster: 161856 }
+  "Transformers":
+    template: { name: Set, collection: "8650, 623852", poster: 160997 }
+  "TRON":
+    template: { name: Set, collection: 63043, poster: 160998 }
+  "Underworld":
+    template: { name: Set, collection: 2326, poster: 161852 }
+  "Universal Horror":
+    template: { name: Set, list: "ls020578332", poster: 164128 }
+  "Up":
+    template: { name: Set, movie: "14160, 24589, 72962", poster: 162953 }
+  "V/H/S":
+    template: { name: Set, collection: 207621, poster: 161850 }
+  "Venom":
+    template: { name: Set, collection: 558216, poster: 182881 }
+  "Wallace & Gromit":
+    template: { name: Set, collection: 529, poster: 162952 }
+  "WALL·E": 
+    template: { name: Set, movie: "10681, 13413", poster: 162951 }
+  "War of the Worlds":
+    template: { name: Set, collection: 201061, poster: 164134 }
+  "Watchmen": ##Not CmdrRiker
+    template: { name: Set, list: 8196349, poster: 139221 }
+  "Wayne's World":
+    template: { name: Set, collection: 8979, poster: 166273 }
+  "Willy Wonka":
+    template: { name: Set, movie: "252, 118, 455411, 787699", poster: 164135 }
+  "Winnie the Pooh":
+    template: { name: Set, imdb: "ls026121239", poster: 167951 }
+  "Without a Paddle":
+    template: { name: Set, collection: 146534, poster: 222347 }
+  "Wolverine":
+    template: { name: Set, collection: 453993, poster: 171121 }
+  "Wonder Woman":
+    template: { name: Set, collection: 468552, poster: 139303 }
+  "Wreck-It Ralph":
+    template: { name: Set, collection: 404825, poster: 162950 }
+  "X-Men":
+    template: { name: Set, collection: 748, poster: 171112 }
+  "xXx":
+    template: { name: Set, collection: 52785, poster: 164850 }
+  "Zombieland":
+    template: { name: Set, collection: 537982, poster: 161841}
+  "Zoolander":
+    template: { name: Set, collection: 352789, poster: 166274 }
+  "Zorro":
+    template: { name: Set, collection: 1657, poster: 165425 }
+
+######################################################
+#           Actor Collections - Droppisalt           #
+######################################################
+  Adam Driver:
+    template: { name: Actor, actor: 1023139 }
+  Adam Sandler:
+    template: { name: Actor, actor: 19292 }
+  Al Pacino:
+    template: { name: Actor, actor: 1158 }
+  Alfred Hitchcock:
+    template: { name: Actor, actor: 2636 }
+  Amanda Seyfried:
+    template: { name: Actor, actor: 71070 }
+  Amber Heard:
+    template: { name: Actor, actor: 55085 }
+  Amy Adams:
+    template: { name: Actor, actor: 9273 }
+  Amy Schumer:
+    template: { name: Actor, actor: 440414 }
+  Angelina Jolie:
+    template: { name: Actor, actor: 11701 }
+  Anne Hathaway:
+    template: { name: Actor, actor: 1813 }
+  Anthony Bourdain:
+    template: { name: Actor, actor: 1223677 }
+  Anthony Hopkins:
+    template: { name: Actor, actor: 4173 }
+  Antonio Banderas:
+    template: { name: Actor, actor: 3131 }
+  Arnold Schwarzenegger:
+    template: { name: Actor, actor: 1100 }
+  Aubrey Plaza:
+    template: { name: Actor, actor: 119592 }
+  Audrey Hepburn:
+    template: { name: Actor, actor: 1932 }
+  Ben Affleck:
+    template: { name: Actor, actor: 880 }
+  Ben Stiller:
+    template: { name: Actor, actor: 7399 }
+  Benedict Cumberbatch:
+    template: { name: Actor, actor: 71580 }
+  Bette Davis:
+    template: { name: Actor, actor: 3380 }
+  Bill Murray:
+    template: { name: Actor, actor: 1532 }
+  Bill Paxton:
+    template: { name: Actor, actor: 2053 }
+  Billy Bob Thornton:
+    template: { name: Actor, actor: 879 }
+  Blake Lively:
+    template: { name: Actor, actor: 59175 }
+  Bo Burnham:
+    template: { name: Actor, actor: 115128 }
+  Brad Pitt:
+    template: { name: Actor, actor: 287 }
+  Bradley Cooper:
+    template: { name: Actor, actor: 51329 }
+  Brendan Fraser:
+    template: { name: Actor, actor: 18269 }
+  Brie Larson:
+    template: { name: Actor, actor: 60073 }
+  Brittany Murphy:
+    template: { name: Actor, actor: 328 }
+  Bruce Lee:
+    template: { name: Actor, actor: 19429 }
+  Bruce Willis:
+    template: { name: Actor, actor: 62 }
+  Burt Reynolds:
+    template: { name: Actor, actor: 16475 }
+  Cameron Diaz:
+    template: { name: Actor, actor: 6941 }
+  Cara Delevingne:
+    template: { name: Actor, actor: 1289968 }
+  Carrie Fisher:
+    template: { name: Actor, actor: 4 }
+  Cary Grant:
+    template: { name: Actor, actor: 2638 }
+  Cate Blanchett:
+    template: { name: Actor, actor: 112 }
+  Catherine Zeta-Jones:
+    template: { name: Actor, actor: 1922 }
+  Channing Tatum:
+    template: { name: Actor, actor: 38673 }
+  Charles Bronson:
+    template: { name: Actor, actor: 4960 }
+  Charlie Chaplin:
+    template: { name: Actor, actor: 13848 }
+  Charlize Theron:
+    template: { name: Actor, actor: 6885 }
+  Chevy Chase:
+    template: { name: Actor, actor: 54812 }
+  Chiwetel Ejiofor:
+    template: { name: Actor, actor: 5294 }
+  Chris Evans:
+    template: { name: Actor, actor: 16828 }
+  Chris Farley:
+    template: { name: Actor, actor: 58198 }
+  Chris Hemsworth:
+    template: { name: Actor, actor: 74568 }
+  Chris Pratt:
+    template: { name: Actor, actor: 73457 }
+  Chris Rock:
+    template: { name: Actor, actor: 2632 }
+  Christian Bale:
+    template: { name: Actor, actor: 3894 }
+  Christopher Nolan:
+    template: { name: Actor, actor: 525 }
+  Christopher Walken:
+    template: { name: Actor, actor: 4690 }
+  Chuck Norris:
+    template: { name: Actor, actor: 51576 }
+  Clint Eastwood:
+    template: { name: Actor, actor: 190 }
+  Coen Brothers:
+    template: { name: Actor, actor: "1223, 1224" }
+    summary: "Joel Coen and Ethan Coen, collectively referred to as the Coen Brothers, are American film directors, producers, screenwriters, and editors. Their films span many genres and styles, which they frequently subvert or parody. Their most acclaimed works include: Raising Arizona (1987), Miller's Crossing (1990), Fargo (1996), The Big Lebowski (1998), O Brother, Where Art Thou? (2000), No Country for Old Men (2007), Burn After Reading (2008), A Serious Man (2009), True Grit (2010), Inside Llewyn Davis (2013), and The Ballad of Buster Scruggs (2018)."
+  Daisy Ridley:
+    template: { name: Actor, actor: 1315036 }
+  Daniel Craig:
+    template: { name: Actor, actor: 8784 }
+  Daniel Day-Lewis:
+    template: { name: Actor, actor: 11856 }
+  Daniel Radcliffe:
+    template: { name: Actor, actor: 10980 }
+  Danny Trejo:
+    template: { name: Actor, actor: 11160 }
+  Dave Bautista:
+    template: { name: Actor, actor: 543530 }
+  Dave Chappelle:
+    template: { name: Actor, actor: 4169 }
+  David Attenborough:
+    template: { name: Actor, actor: 86543 }
+  Demetri Martin:
+    template: { name: Actor, actor: 84075 }
+  Denzel Washington:
+    template: { name: Actor, actor: 5292 }
+  Diane Keaton:
+    template: { name: Actor, actor: 3092 }
+  Don Cheadle:
+    template: { name: Actor, actor: 1896 }
+  Dustin Hoffman:
+    template: { name: Actor, actor: 4483 }
+  Dwayne Johnson:
+    template: { name: Actor, actor: 18918 }
+  Eddie Murphy:
+    template: { name: Actor, actor: 776 }
+  Edward Norton:
+    template: { name: Actor, actor: 819 }
+  Elizabeth Olsen:
+    template: { name: Actor, actor: 550843 }
+  Elliot Page:
+    template: { name: Actor, actor: 27578 }
+  Elvis Presley:
+    template: { name: Actor, actor: 21457 }
+  Emilia Clarke:
+    template: { name: Actor, actor: 1223786 }
+  Emily Blunt:
+    template: { name: Actor, actor: 5081 }
+  Emma Stone:
+    template: { name: Actor, actor: 54693 }
+  Emma Watson:
+    template: { name: Actor, actor: 10990 }
+  Ewan McGregor:
+    template: { name: Actor, actor: 3061 }
+  Frances McDormand:
+    template: { name: Actor, actor: 3910 }
+  Gal Gadot:
+    template: { name: Actor, actor: 90633 }
+  Gary Oldman:
+    template: { name: Actor, actor: 64 }
+  Gene Hackman:
+    template: { name: Actor, actor: 193 }
+  Gene Wilder:
+    template: { name: Actor, actor: 3460 }
+  George Carlin:
+    template: { name: Actor, actor: 15903 }
+  George Clooney:
+    template: { name: Actor, actor: 1461 }
+  Gerard Butler:
+    template: { name: Actor, actor: 17276 }
+  Goldie Hawn:
+    template: { name: Actor, actor: 18892 }
+  Grace Kelly:
+    template: { name: Actor, actor: 4070 }
+  Gregory Peck:
+    template: { name: Actor, actor: 8487 }
+  Gwyneth Paltrow:
+    template: { name: Actor, actor: 12052 }
+  Harrison Ford:
+    template: { name: Actor, actor: 3 }
+  Hayao Miyazaki:
+    template: { name: Actor, actor: 608 }
+  Helen Mirren:
+    template: { name: Actor, actor: 15735 }
+  Helena Bonham Carter:
+    template: { name: Actor, actor: 1283 }
+  Hugh Jackman:
+    template: { name: Actor, actor: 6968 }
+  Humphrey Bogart:
+    template: { name: Actor, actor: 4110 }
+  Ian McKellen:
+    template: { name: Actor, actor: 1327 }
+  Ice Cube:
+    template: { name: Actor, actor: 9778 }
+  Idris Elba:
+    template: { name: Actor, actor: 17605 }
+  Iliza Shlesinger:
+    template: { name: Actor, actor: 96316 }
+  Ingrid Bergman:
+    template: { name: Actor, actor: 4111 }
+  J.J. Abrams:
+    template: { name: Actor, actor: 15344 }
+  Jack Black:
+    template: { name: Actor, actor: 70851 }
+  Jack Nicholson:
+    template: { name: Actor, actor: 514 }
+  Jackie Chan:
+    template: { name: Actor, actor: 18897 }
+  James Cameron:
+    template: { name: Actor, actor: 2710 }
+  James Dean:
+    template: { name: Actor, actor: 2749 }
+  James Franco:
+    template: { name: Actor, actor: 17051 }
+  James Stewart:
+    template: { name: Actor, actor: 854 }
+  Jamie Foxx:
+    template: { name: Actor, actor: 134 }
+  Jason Bateman:
+    template: { name: Actor, actor: 23532 }
+  Jason Statham:
+    template: { name: Actor, actor: 976 }
+  Jeff Bridges:
+    template: { name: Actor, actor: 1229 }
+  Jeff Goldblum:
+    template: { name: Actor, actor: 4785 }
+  Jennifer Aniston:
+    template: { name: Actor, actor: 4491 }
+  Jennifer Connelly:
+    template: { name: Actor, actor: 6161 }
+  Jennifer Lawrence:
+    template: { name: Actor, actor: 72129 }
+  Jeremy Gardner:
+    template: { name: Actor, actor: 1159650 }
+  Jesse Eisenberg:
+    template: { name: Actor, actor: 44735 }
+  Jessica Alba:
+    template: { name: Actor, actor: 56731 }
+  Jet Li:
+    template: { name: Actor, actor: 1336 }
+  Jim Carrey:
+    template: { name: Actor, actor: 206 }
+  Joaquin Phoenix:
+    template: { name: Actor, actor: 73421 }
+  John Candy:
+    template: { name: Actor, actor: 7180 }
+  John Mulaney:
+    template: { name: Actor, actor: 933558 }
+  John Travolta:
+    template: { name: Actor, actor: 8891 }
+  John Wayne:
+    template: { name: Actor, actor: 4165 }
+  Johnny Depp:
+    template: { name: Actor, actor: 85 }
+  Jordan Peele:
+    template: { name: Actor, actor: 291263 }
+  Josh Brolin:
+    template: { name: Actor, actor: 16851 }
+  Julia Roberts:
+    template: { name: Actor, actor: 1204 }
+  Julianne Moore:
+    template: { name: Actor, actor: 1231 }
+  Kaitlyn Dever:
+    template: { name: Actor, actor: 481337 }
+  Kate Winslet:
+    template: { name: Actor, actor: 204 }
+  Keanu Reeves:
+    template: { name: Actor, actor: 6384 }
+  Keira Knightley:
+    template: { name: Actor, actor: 116 }
+  Kevin Bacon:
+    template: { name: Actor, actor: 4724 }
+  Kevin Costner:
+    template: { name: Actor, actor: 1269 }
+  Kevin Hart:
+    template: { name: Actor, actor: 55638 }
+  Kevin Smith:
+    template: { name: Actor, actor: 19303 }
+  Kristen Stewart:
+    template: { name: Actor, actor: 37917 }
+  Laurence Fishburne:
+    template: { name: Actor, actor: 2975 }
+  Leonardo DiCaprio:
+    template: { name: Actor, actor: 6193 }
+  Liam Neeson:
+    template: { name: Actor, actor: 3896 }
+  Louis C.K:
+    template: { name: Actor, actor: 52849 }
+  Lucy Liu:
+    template: { name: Actor, actor: 140 }
+  M. Night Shyamalan:
+    template: { name: Actor, actor: 11614 }
+  Mads Mikkelsen:
+    template: { name: Actor, actor: 1019 }
+  Margot Robbie:
+    template: { name: Actor, actor: 234352 }
+  Marilyn Monroe:
+    template: { name: Actor, actor: 3149 }
+  Mark Ruffalo:
+    template: { name: Actor, actor: 103 }
+  Mark Wahlberg:
+    template: { name: Actor, actor: 13240 }
+  Marlon Brando:
+    template: { name: Actor, actor: 3084 }
+  Matt Damon:
+    template: { name: Actor, actor: 1892 }
+  Matthew McConaughey:
+    template: { name: Actor, actor: 10297 }
+  Meg Ryan:
+    template: { name: Actor, actor: 5344 }
+  Megan Fox:
+    template: { name: Actor, actor: 19537 }
+  Mel Brooks:
+    template: { name: Actor, actor: 14639 }
+  Mel Gibson:
+    template: { name: Actor, actor: 2461 }
+  Melissa McCarthy:
+    template: { name: Actor, actor: 55536 }
+  Meryl Streep:
+    template: { name: Actor, actor: 5064 }
+  Michael Bay:
+    template: { name: Actor, actor: 865 }
+  Michael Caine:
+    template: { name: Actor, actor: 3895 }
+  Michael Douglas:
+    template: { name: Actor, actor: 3392 }
+  Michael Fassbender:
+    template: { name: Actor, actor: 17288 }
+  Michael Keaton:
+    template: { name: Actor, actor: 2232 }
+  Mike Myers:
+    template: { name: Actor, actor: 12073 }
+  Mila Kunis:
+    template: { name: Actor, actor: 18973 }
+  Milla Jovovich:
+    template: { name: Actor, actor: 63 }
+  Morgan Freeman:
+    template: { name: Actor, actor: 192 }
+  Naomi Watts:
+    template: { name: Actor, actor: 3489 }
+  Natalie Portman:
+    template: { name: Actor, actor: 524 }
+  Nick Frost:
+    template: { name: Actor, actor: 11109 }
+  Nicolas Cage:
+    template: { name: Actor, actor: 2963 }
+  Nicole Kidman:
+    template: { name: Actor, actor: 2227 }
+  Nina Dobrev:
+    template: { name: Actor, actor: 19961 }
+  Orlando Bloom:
+    template: { name: Actor, actor: 114 }
+  Owen Wilson:
+    template: { name: Actor, actor: 887 }
+  Patrick Stewart:
+    template: { name: Actor, actor: 2387 }
+  Patrick Wilson:
+    template: { name: Actor, actor: 17178 }
+  Patton Oswalt:
+    template: { name: Actor, actor: 10872 }
+  Paul Newman:
+    template: { name: Actor, actor: 3636 }
+  Paul Rudd:
+    template: { name: Actor, actor: 22226 }
+  Penélope Cruz:
+    template: { name: Actor, actor: 955 }
+  Philip Seymour Hoffman:
+    template: { name: Actor, actor: 1233 }
+  Quentin Tarantino:
+    template: { name: Actor, actor: 138 }
+  Rachel McAdams:
+    template: { name: Actor, actor: 53714 }
+  Rachel Weisz:
+    template: { name: Actor, actor: 3293 }
+  Rami Malek:
+    template: { name: Actor, actor: 17838 }
+  Reese Witherspoon:
+    template: { name: Actor, actor: 368 }
+  Richard Gere:
+    template: { name: Actor, actor: 1205 }
+  Richard Pryor:
+    template: { name: Actor, actor: 9309 }
+  Ridley Scott:
+    template: { name: Actor, actor: 578 }
+  Rob Schneider:
+    template: { name: Actor, actor: 60949 }
+  Robert De Niro:
+    template: { name: Actor, actor: 380 }
+  Robert Duval:
+    template: { name: Actor, actor: 3087 }
+  Robert Redford:
+    template: { name: Actor, actor: 4135 }
+  Robert Downey Jr.:
+    template: { name: Actor, actor: 3223 }
+  Robin Williams:
+    template: { name: Actor, actor: 2157 }
+  Rosario Dawson:
+    template: { name: Actor, actor: 5916 }
+  Russell Crowe:
+    template: { name: Actor, actor: 934 }
+  Ryan Gosling:
+    template: { name: Actor, actor: 30614 }
+  Ryan Reynolds:
+    template: { name: Actor, actor: 10859 }
+  Sam Neill:
+    template: { name: Actor, actor: 4783 }
+  Samuel L. Jackson:
+    template: { name: Actor, actor: 2231 }
+  Sandra Bullock:
+    template: { name: Actor, actor: 18277 }
+  Sacha Baron Cohen:
+    template: { name: Actor, actor: 6730 }
+  Scarlett Johansson:
+    template: { name: Actor, actor: 1245 }
+  Saoirse Ronan:
+    template: { name: Actor, actor: 36592 }
+  Sean Connery:
+    template: { name: Actor, actor: 738 }
+  Sean Penn:
+    template: { name: Actor, actor: 2228 }
+  Seth MacFarlane:
+    template: { name: Actor, actor: 52139 }
+  Seth Rogen:
+    template: { name: Actor, actor: 19274 }
+  Shia LaBeouf:
+    template: { name: Actor, actor: 10959 }
+  Sigourney Weaver:
+    template: { name: Actor, actor: 10205 }
+  Simon Pegg:
+    template: { name: Actor, actor: 11108 }
+  Steve Buscemi:
+    template: { name: Actor, actor: 884 }
+  Steve Carell:
+    template: { name: Actor, actor: 4495 }
+  Steve Irwin:
+    template: { name: Actor, actor: 559670 }
+  Steve Martin:
+    template: { name: Actor, actor: 67773 }
+  Steven Seagal:
+    template: { name: Actor, actor: 23880 }
+  Steven Spielberg:
+    template: { name: Actor, actor: 488 }
+  Susan Sarandon:
+    template: { name: Actor, actor: 4038 }
+  Sylvester Stallone:
+    template: { name: Actor, actor: 16483 }
+  Tilda Swinton:
+    template: { name: Actor, actor: 3063 }
+  Tim Allen:
+    template: { name: Actor, actor: 12898 }
+  Tim Burton:
+    template: { name: Actor, actor: 510 }
+  Tom Cruise:
+    template: { name: Actor, actor: 500 }
+  Tom Hanks:
+    template: { name: Actor, actor: 31 }
+  Tom Hardy:
+    template: { name: Actor, actor: 2524 }
+  Tom Segura:
+    template: { name: Actor, actor: 1238012 }
+  Tommy Lee Jones:
+    template: { name: Actor, actor: 2176 }
+  Trey Parker:
+    template: { name: Actor, actor: 34517 }
+  Uma Thurman:
+    template: { name: Actor, actor: 139 }
+  Vin Diesel:
+    template: { name: Actor, actor: 12835 }
+  Vince Vaughn:
+    template: { name: Actor, actor: 4937 }
+  Wesley Snipes:
+    template: { name: Actor, actor: 10814 }
+  Will Ferrell:
+    template: { name: Actor, actor: 23659 }
+  Will Smith:
+    template: { name: Actor, actor: 2888 }
+  Willem Dafoe:
+    template: { name: Actor, actor: 5293 }
+  Woody Harrelson:
+    template: { name: Actor, actor: 57755 }
+  Zack Snyder:
+    template: { name: Actor, actor: 15217 }
+  Zendaya:
+    tempalte: { name: Actor, actor: 505710 }
+  Zoe Saldana:
+    template: { name: Actor, actor: 8691 }

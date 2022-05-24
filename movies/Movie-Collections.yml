@@ -30,6 +30,7 @@ templates:
     optional:
       - poster
     trakt_list: https://trakt.tv/users/lish408/lists/rotten-tomatoes-best-of-<<year>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
     sort_title: +1_<<num>>Best of <<year>>
     sync_mode: sync
     summary: Rotten Tomatoes Best Movies of <<year>>
@@ -68,8 +69,25 @@ templates:
       optional:
         - poster
       url_poster: https://theposterdb.com/api/assets/<<poster>>
-      sort_title: +2_<<collection_name>>
-      collection_order: release
+      sort_title: +2_002<<collection_name>>
+      collection_order: alpha
+
+  Studio:
+    optional:
+      - company
+      - poster_id
+      - imdb
+      - list
+      - poster
+      - movie
+    tmdb_company_details: <<company>>
+    tmdb_list: <<list>>
+    tmdb_movie: <<movie>>
+    imdb_list: https://www.imdb.com/list/<<imdb>>
+    sort_title: +3_<<collection_name>>
+    sync_mode: sync
+    smart_label: release.desc
+    url_poster: https://theposterdb.com/api/assets/<<poster>>
 
   Set:
     optional:
@@ -167,7 +185,7 @@ collections:
   "Top Rated":
     template: { name: Chart, num: "006", poster: 213605 }
     imdb_list: https://www.imdb.com/search/title/?groups=top_250
-    collection_oder: custom
+    collection_order: custom
     tmdb_top_rated: 250
     summary: "Top Rated Movies across the internet"
 
@@ -220,7 +238,8 @@ collections:
 #####################################################
 
   "Best of 2013":
-    template: { name: Best of, num: "017", year: "2013", poster: "2013.jpg" }
+    template: { name: Best of, num: "017", imdb: ls057563436, year: 2013, poster: "2013.jpg" }
+    trakt_list: ""
   
   "Best of 2014":
     template: { name: Best of, num: "018", year: "2014", poster: "2014.jpg" }
@@ -252,12 +271,13 @@ collections:
 #####################################################
 #          Awards Collections - Droppisalt          #
 #####################################################
-  Oscars Winners:
-    template: { name: Award, poster: "award/oscars/winner" } 
-    imdb_list: "https://www.imdb.com/search/title/?title_type=feature,documentary&groups=oscar_winner"
-    summary: "Oscar Winning Movies"
-    #schedule: yearly (03/28)
-  
+
+  BAFTA Best Films:
+    template: { name: Award, poster: "award/bafta/winner" } 
+    trakt_list: https://trakt.tv/users/maxwelldeux/lists/bafta-award-best-film
+    summary: "The EE British Academy Film Awards or BAFTA Film Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film."
+    #schedule: yearly (02/21)
+
   Oscars Best Picture Winners:
     template: { name: Award, poster: "award/oscars/best_picture_winner" }
     imdb_list: https://www.imdb.com/search/title/?count=250&groups=oscar_best_picture_winners&sort=year,desc
@@ -268,7 +288,13 @@ collections:
     template: { name: Award, poster: "award/oscars/nomination" } 
     trakt_list: https://trakt.tv/users/jcbwoldseth/lists/oscar-race-2022
     summary: 2022 Oscar nominations
-         
+  
+  Oscars Winners:
+    template: { name: Award, poster: "award/oscars/winner" } 
+    imdb_list: "https://www.imdb.com/search/title/?title_type=feature,documentary&groups=oscar_winner"
+    summary: "Oscar Winning Movies"
+    #schedule: yearly (03/28)
+  
 #  Cannes - Palme d'or:
 #    template: { name: Award, poster: "award/cannes/winner" }  
 #    trakt_list: https://trakt.tv/users/sp1ti/lists/cannes-palme-d-or-winners
@@ -285,13 +311,7 @@ collections:
 #    template: { name: Award, "award/berlinale/winner" } 
 #    trakt_list: https://trakt.tv/users/maxwelldeux/lists/berlin-international-film-festival-golden-bears
 #    summary: "The Berlin International Film Festival, usually called the Berlinale, is a film festival held annually in Berlin, Germany."
-#    #schedule: yearly (02/21)
-
-  BAFTA Best Films:
-    template: { name: Award, poster: "award/bafta/winner" } 
-    trakt_list: https://trakt.tv/users/maxwelldeux/lists/bafta-award-best-film
-    summary: "The EE British Academy Film Awards or BAFTA Film Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts (BAFTA) to honour the best British and international contributions to film."
-    #schedule: yearly (02/21)
+#    schedule: yearly (02/21)
 
 #  Venice:
 #    template: { name: Award, poster: "award/venice/winner" } 
@@ -449,8 +469,6 @@ collections:
     summary: "Walt Disney Pictures is an American film production studio of The Walt Disney Studios, which is owned by The Walt Disney Company. The studio is the flagship producer of live-action feature films within the Walt Disney Studios unit, and is based at the Walt Disney Studios in Burbank, California. Animated films produced by Walt Disney Animation Studios and Pixar Animation Studios are also released under this brand. Walt Disney Studios Motion Pictures distributes and markets the films produced by Walt Disney Pictures."
   "DreamWorks":
     template: { name: Studio, company: 521, poster: 148022 }
-#    filters:
-#      collection.not: Aardman
     summary: "DreamWorks Animation LLC (also simply known as DreamWorks) is an American animation studio and a subsidiary of Universal Pictures, itself a subsidiary of Comcast's NBCUniversal. It is based in Glendale, California, and produces animated feature films, television programs, and online virtual games."
   "Happy Madison Productions":
     template: { name: Studio, company: 878, poster: 154926 }
@@ -490,6 +508,8 @@ collections:
   "Warner Animation Group": ##Not CmdrRiker
     template: { name: Studio, company: 25120, poster: 193028 }
     summary: "The Warner Animation Group (WAG) is an American animation studio that is the feature animation division of Warner Bros. Entertainment. Established on January 7, 2013, the studio is the successor to the dissolved 2D traditional hand-drawn animation studio Warner Bros. Feature Animation, which shut down in 2003 and the dissolved family film division Warner Bros. Family Entertainment, which shut down in 2009. The entity is also a sister animation studio of the regular animation studio Warner Bros. Animation"
+#  "A24":
+#    template: { name: Set, company: 41077, poster: 166234 }
 
 ######################################################
 #           Movie Collections - Droppisalt           #
@@ -501,8 +521,6 @@ collections:
     template: { name: Set, collection: 91660, poster: 160780 }
   "300":
     template: { name: Set, collection: 125570, poster: 162103 }
-#  "A24":
-#    template: { name: Set, company: 41077, poster: 166234 }
   "Ace Ventura":
     template: { name: Set, collection: 3167, poster: 165778 }
   "Alice in Wonderland": ##Not CmdrRiker
@@ -873,8 +891,8 @@ collections:
     template: { name: Set, collection: 8581, movie: 23437, poster: 161307 }
   "Now You See Me":
     template: { name: Set, collection: 382685, poster: 164813 }
-#  "Nun":
-#    template: { name: Set, collection: 968051, poster: }
+  "Nun":
+    template: { name: Set, collection: 968051, poster: }
   "Ocean's":
     template: { name: Set, imdb: "ls029083335", poster: 164814 }
   "Ouija":
@@ -964,7 +982,7 @@ collections:
   "Scary Movie":
     template: { name: Set, collection: 4246, poster: 161875 }
   "Scooby-Doo (Animated)":
-    tempalte: { name: Set, imdb: "ls565045079", movie: "740385, 48919", poster: 158984 }
+    template: { name: Set, imdb: "ls565045079", movie: "740385, 48919", poster: 158984 }
   "Scooby-Doo (Live Action)":
     template: { name: Set, collection: "86860, 633815", movie: 489939, poster: 161874 }
   "Scorpion King":
@@ -1624,6 +1642,6 @@ collections:
   Zack Snyder:
     template: { name: Actor, actor: 15217 }
   Zendaya:
-    tempalte: { name: Actor, actor: 505710 }
+    template: { name: Actor, actor: 505710 }
   Zoe Saldana:
     template: { name: Actor, actor: 8691 }

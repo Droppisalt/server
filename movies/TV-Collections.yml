@@ -6,12 +6,11 @@ templates:
 
   Network:
     optional:
-    - network
-    smart_label: release.desc
+      - network
+    smart_label: title.asc
     sort_title: +2_<<collection_name>>
     sync_mode: sync
     tmdb_network: <<network>>
-    collection_order: alpha
 
   IMDb-Genre:
     default:
@@ -24,14 +23,12 @@ templates:
         limit: <<limit>>
     sort_title: +3_<<collection_name>>
     sync_mode: sync
-    smart_label: random
-    collection_order: alpha
+    smart_label: title.asc
 
   Other Genre:
     sort_title: +3_<<collection_name>>
     sync_mode: sync
-    smart_label: random
-    collection_order: alpha
+    smart_label: title.asc
 
   Studio:
     optional:
@@ -40,9 +37,8 @@ templates:
     tmdb_company: <<company>>
     sort_title: +4_<<collection_name>>
     sync_mode: sync
-    smart_label: release.desc
+    smart_label: title.asc
     url_poster: https://theposterdb.com/api/assets/<<poster_id>>
-    collection_order: alpha
 
   Set:
     optional:
@@ -63,7 +59,6 @@ templates:
   Actor:
     optional:
       - poster
-    tmdb_collection_details: <<collection>>
     tmdb_actor_details: <<actor>>
 #      tmdb_director_details: <<person>>
 #      tmdb_writer_details: <<person>>
